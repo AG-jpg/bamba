@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float movementSpeed = 10;
     private Rigidbody2D rb;
+    public float movementSpeed = 10;
+    public float jumpForce = 5;
+    public Vector2 direction;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -28,12 +30,35 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
-        Vector2 direction = new Vector2(x, y);
+        direction = new Vector2(x, y);
 
-        Walk(direction);
+        Walk();
+        improvedJump();
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        } 
     }
 
-    private void Walk(Vector2 direction)
+    private void improvedJump()
+    {
+        if(rb.velocity.y < 0)
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (2.5f - 1) * Time.deltaTime;
+        }
+        else if(rb.velocity.y > 0 && !Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (2.0f - 1) * Time.deltaTime;
+        }
+    }
+
+    private void Jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+        rb.velocity += Vector2.up * jumpForce;
+    }
+
+    private void Walk()
     {
         rb.velocity = new Vector2(direction.x * movementSpeed, rb.velocity.y);
     }
