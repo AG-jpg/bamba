@@ -5,9 +5,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
+    public Vector2 direction;
+
+    [Header ("Stadistics")]
     public float movementSpeed = 10;
     public float jumpForce = 5;
-    public Vector2 direction;
+    
+
+    [Header ("Booleans")]
+    public bool canMove = true;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -60,6 +66,21 @@ public class PlayerController : MonoBehaviour
 
     private void Walk()
     {
-        rb.velocity = new Vector2(direction.x * movementSpeed, rb.velocity.y);
+        if(canMove)
+        {
+            rb.velocity = new Vector2(direction.x * movementSpeed, rb.velocity.y);
+
+            if(direction != Vector2.zero)
+            {
+                if(direction.x < 0 && transform.localScale.x > 0)
+                {
+                    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                } else if(direction.x > 0 && transform.localScale.x < 0)
+                {
+                     transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                }
+            }
+        }
+        
     }
 }
