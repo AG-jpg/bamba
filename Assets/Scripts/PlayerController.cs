@@ -10,10 +10,16 @@ public class PlayerController : MonoBehaviour
     [Header ("Stadistics")]
     public float movementSpeed = 10;
     public float jumpForce = 5;
+
+    [Header ("Collisions")]
+    public Vector2 down;
+    public float radiusDetection;
+    public LayerMask FloorLayer;
     
 
     [Header ("Booleans")]
     public bool canMove = true;
+    public bool stepping = true;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -29,6 +35,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Movement();
+        Anchor();
     }
 
     private void Movement()
@@ -42,7 +49,10 @@ public class PlayerController : MonoBehaviour
         improvedJump();
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Jump();
+            if(stepping)
+            {
+                Jump();
+            }
         } 
     }
 
@@ -56,6 +66,11 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (2.0f - 1) * Time.deltaTime;
         }
+    }
+
+    private void Anchor()
+    {
+        stepping = Physics2D.OverlapCircle((Vector2)transform.position + down, radiusDetection, FloorLayer);
     }
 
     private void Jump()
