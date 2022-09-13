@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [Header ("Stadistics")]
     public float movementSpeed = 10;
     public float jumpForce = 5;
+    public float dashSpeed = 20;
 
     [Header ("Collisions")]
     public Vector2 down;
@@ -21,6 +22,9 @@ public class PlayerController : MonoBehaviour
     [Header ("Booleans")]
     public bool canMove = true;
     public bool stepping = true;
+    public bool canDash;
+    public bool doingDash;
+    public bool floorStep;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -40,10 +44,57 @@ public class PlayerController : MonoBehaviour
         Anchor();
     }
 
+    private void Dash(float x, float y)
+    {
+        anim.SetBool("Dash", true);
+        Vector3 playerPosition = Camera.main.WorldToViewportPoint(transform.position);
+        Camera.main.GetComponent<RippleEffect>().Emit(playerPosition);
+        
+        canDash = true;
+        rb.velocity = Vector2.zero;
+        rb.velocity += new Vector2(x, y).normalized * dashSpeed;
+        StartCoroutine(prepareDash());
+    }
+
+    private IEnumerator prepareDash()
+    {
+        StartCoroutine(floorDash());
+        rb.gravityScale = 0;
+        doingDash = true;
+
+        yield return new WaitForSeconds(0.2f);
+        rb.gravityScale = 1;
+        doingDash = false;
+        endDash();
+    }
+
+    private IEnumerator floorDash()
+    {
+        yield return new WaitForSeconds(0.15f);
+        if(stepping)
+        {
+            canDash = false;
+        }
+    }
+
+    public void endDash()
+    {
+        anim.SetBool("Dash", false);
+    }
+
+    private void touchFloor()
+    {
+        canDash = false;
+        doingDash = false;
+    }
+
     private void Movement()
     {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
+
+        float xRaw = Input.GetAxisRaw("Horizontal");
+        float yRaw = Input.GetAxisRaw("Vertical");
 
         direction = new Vector2(x, y);
 
@@ -57,14 +108,30 @@ public class PlayerController : MonoBehaviour
             }
         } 
 
-        if(Input.GetKeyDown(KeyCode.X))
-    {
-        Camera.main.GetComponent<RippleEffect>().Emit(transform.position);
-    }
+        if(Input.GetKeyDown(KeyCode.X) && !doingDash)
+         {
+            if(xRaw != 0 || yRaw != 0)
+            {
+                Dash(xRaw, yRaw);
+            }
+         }
+
+        if(stepping && !floorStep)
+        {
+            touchFloor();
+            floorStep = true;
+        }
+
+        if(!stepping && floorStep)
+        {
+            stepping = false;
+        }
     }
 
     private void improvedJump()
     {
+
+        
         if(rb.velocity.y < 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (2.5f - 1) * Time.deltaTime;
@@ -88,7 +155,7 @@ public class PlayerController : MonoBehaviour
 
     private void Walk()
     {
-        if(canMove)
+        if(canMove && !doingDash)
         {
             rb.velocity = new Vector2(direction.x * movementSpeed, rb.velocity.y);
 
