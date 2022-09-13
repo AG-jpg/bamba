@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Animator anim;
     public Vector2 direction;
 
     [Header ("Stadistics")]
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -87,6 +89,14 @@ public class PlayerController : MonoBehaviour
 
             if(direction != Vector2.zero)
             {
+                if(!stepping)
+                {
+                    anim.SetBool("Standing", true);
+                }
+                else
+                {
+                    anim.SetBool("Walk", true);
+                }
                 if(direction.x < 0 && transform.localScale.x > 0)
                 {
                     transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
@@ -94,6 +104,9 @@ public class PlayerController : MonoBehaviour
                 {
                      transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 }
+            } else
+            {
+                anim.SetBool("Walk", false);
             }
         }
         
