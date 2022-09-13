@@ -56,6 +56,11 @@ public class PlayerController : MonoBehaviour
                 Jump();
             }
         } 
+
+        if(Input.GetKeyDown(KeyCode.X))
+    {
+        Camera.main.GetComponent<RippleEffect>().Emit(transform.position);
+    }
     }
 
     private void improvedJump()
