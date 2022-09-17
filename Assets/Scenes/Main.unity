@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 396908309}
   m_Layer: 0
   m_Name: Cinema Camera
-  m_TagString: Untagged
+  m_TagString: VirtualCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -746,7 +746,6 @@ GameObject:
   - component: {fileID: 1000114657}
   - component: {fileID: 1000114656}
   - component: {fileID: 1000114659}
-  - component: {fileID: 1000114658}
   m_Layer: 0
   m_Name: mushroom-house
   m_TagString: Untagged
@@ -819,32 +818,6 @@ Transform:
   m_Father: {fileID: 1930528753}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1000114658
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000114655}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.28461036, y: 0.913397}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.54, y: 2.19}
-    newSize: {x: 4.54, y: 2.19}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.58194405, y: 0.15140378}
-  m_EdgeRadius: 0
 --- !u!61 &1000114659
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -881,7 +854,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1050525297}
   - component: {fileID: 1050525296}
-  - component: {fileID: 1050525298}
   m_Layer: 0
   m_Name: rock
   m_TagString: Untagged
@@ -954,32 +926,6 @@ Transform:
   m_Father: {fileID: 1930528753}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1050525298
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1050525295}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.008548021, y: -0.04701197}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.43, y: 0.53}
-    newSize: {x: 1.43, y: 0.53}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0880952, y: 0.43597603}
-  m_EdgeRadius: 0
 --- !u!1 &1186686649
 GameObject:
   m_ObjectHideFlags: 0
@@ -3272,6 +3218,7 @@ MonoBehaviour:
   canDash: 1
   doingDash: 0
   floorStep: 0
+  shake: 0
 --- !u!61 &1753299947
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3622,7 +3569,7 @@ MonoBehaviour:
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
   m_AmplitudeGain: 0
-  m_FrequencyGain: 0
+  m_FrequencyGain: 1
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &2090452528
 GameObject:

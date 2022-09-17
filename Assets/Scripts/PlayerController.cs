@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
     public Vector2 direction;
+    private CinemachineVirtualCamera cm;
 
     [Header ("Stadistics")]
     public float movementSpeed = 10;
@@ -25,10 +27,12 @@ public class PlayerController : MonoBehaviour
     public bool canDash;
     public bool doingDash;
     public bool floorStep;
+    public bool shake = false;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        cm = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
     }
 
     // Start is called before the first frame update
@@ -44,16 +48,40 @@ public class PlayerController : MonoBehaviour
         Anchor();
     }
 
+    private IEnumerator ShakeCamera()
+    {
+        shake = true;
+
+        CinemachineBasicMultiChannelPerlin cinemachinePerlin = cm.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        cinemachinePerlin.m_AmplitudeGain = 5;
+        yield return new WaitForSeconds(0.3f);
+        cinemachinePerlin.m_AmplitudeGain = 0;
+        shake = false;
+    }
+
+    private IEnumerator ShakeCamera(float time)
+    {
+        Vector3 v = new Vector3(1,2);
+        shake = true;
+
+        CinemachineBasicMultiChannelPerlin cinemachinePerlin = cm.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        cinemachinePerlin.m_AmplitudeGain = 5;
+        yield return new WaitForSeconds(time);
+        cinemachinePerlin.m_AmplitudeGain = 0;
+        shake = false;
+    }
+
     private void Dash(float x, float y)
     {
         anim.SetBool("Dash", true);
         Vector3 playerPosition = Camera.main.WorldToViewportPoint(transform.position);
         Camera.main.GetComponent<RippleEffect>().Emit(playerPosition);
+        StartCoroutine(prepareDash());
         
         canDash = true;
         rb.velocity = Vector2.zero;
         rb.velocity += new Vector2(x, y).normalized * dashSpeed;
-        StartCoroutine(prepareDash());
+        StartCoroutine(ShakeCamera());
     }
 
     private IEnumerator prepareDash()
