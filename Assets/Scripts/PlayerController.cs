@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     public Vector2 direction;
     private CinemachineVirtualCamera cm;
+    private AudioSource jumpfx;
 
     [Header ("Stadistics")]
     public float movementSpeed = 10;
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        jumpfx = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -133,6 +134,7 @@ public class PlayerController : MonoBehaviour
             if(stepping)
             {
                 Jump();
+                jumpfx.Play();
             }
         } 
 
