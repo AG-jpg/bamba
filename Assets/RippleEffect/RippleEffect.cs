@@ -26,10 +26,10 @@ public class RippleEffect : MonoBehaviour
     public float reflectionStrength = 0.7f;
 
     [Range(1.0f, 3.0f)]
-    public float waveSpeed = 1.25f;
+    public float waveSpeed = 3f;
 
     [Range(0.0f, 2.0f)]
-    public float dropInterval = 0.5f;
+    public float dropInterval = 0f;
 
     [SerializeField, HideInInspector]
     Shader shader;
@@ -44,9 +44,9 @@ public class RippleEffect : MonoBehaviour
             time = 1000;
         }
 
-        public void Reset()
+        public void Reset(Vector2 position)
         {
-            position = new Vector2(Random.value, Random.value);
+            position = position;
             time = 0;
         }
 
@@ -127,8 +127,8 @@ public class RippleEffect : MonoBehaviour
         Graphics.Blit(source, destination, material);
     }
 
-    public void Emit()
+    public void Emit(Vector2 position)
     {
-        droplets[dropCount++ % droplets.Length].Reset();
+        droplets[dropCount++ % droplets.Length].Reset(position);
     }
 }
