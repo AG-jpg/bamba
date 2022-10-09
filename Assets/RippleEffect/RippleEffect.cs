@@ -127,7 +127,7 @@ public class RippleEffect : MonoBehaviour
         Graphics.Blit(source, destination, material);
     }
 
-    public void Emit(Vector2 position)
+    public void Emit(Vector2 playerPosition)
     {
         droplets[dropCount++ % droplets.Length].Reset(position);
     }
