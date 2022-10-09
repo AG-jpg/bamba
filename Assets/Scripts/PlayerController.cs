@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
         canDash = true;
         rb.velocity = Vector2.zero;
         rb.velocity += new Vector2(x, y).normalized * dashSpeed;
-        StartCoroutine(ShakeCamera());
+        StartCoroutine(prepareDash());
     }
 
     private IEnumerator prepareDash()
