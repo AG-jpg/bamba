@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     [Header ("Stadistics")]
     public float movementSpeed = 10;
     public float jumpForce = 5;
-    public float dashSpeed = 20;
 
     [Header ("Collisions")]
     public Vector2 down;
@@ -25,10 +24,7 @@ public class PlayerController : MonoBehaviour
     [Header ("Booleans")]
     public bool canMove = true;
     public bool stepping = true;
-    public bool canDash;
-    public bool doingDash;
     public bool floorStep;
-    public bool shake = false;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -47,74 +43,6 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
         Anchor();
-    }
-
-    private IEnumerator ShakeCamera()
-    {
-        shake = true;
-
-        CinemachineBasicMultiChannelPerlin cinemachinePerlin = cm.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        cinemachinePerlin.m_AmplitudeGain = 5;
-        yield return new WaitForSeconds(0.3f);
-        cinemachinePerlin.m_AmplitudeGain = 0;
-        shake = false;
-    }
-
-    private IEnumerator ShakeCamera(float time)
-    {
-        Vector3 v = new Vector3(1,2);
-        shake = true;
-
-        CinemachineBasicMultiChannelPerlin cinemachinePerlin = cm.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        cinemachinePerlin.m_AmplitudeGain = 5;
-        yield return new WaitForSeconds(time);
-        cinemachinePerlin.m_AmplitudeGain = 0;
-        shake = false;
-    }
-
-    private void Dash(float x, float y)
-    {
-        anim.SetBool("Dash", true);
-        Vector3 playerPosition = Camera.main.WorldToViewportPoint(transform.position);
-        Camera.main.GetComponent<RippleEffect>().Emit(playerPosition);
-        StartCoroutine(prepareDash());
-        
-        canDash = true;
-        rb.velocity = Vector2.zero;
-        rb.velocity += new Vector2(x, y).normalized * dashSpeed;
-        StartCoroutine(prepareDash());
-    }
-
-    private IEnumerator prepareDash()
-    {
-        StartCoroutine(floorDash());
-        rb.gravityScale = 0;
-        doingDash = true;
-
-        yield return new WaitForSeconds(0.2f);
-        rb.gravityScale = 1;
-        doingDash = false;
-        endDash();
-    }
-
-    private IEnumerator floorDash()
-    {
-        yield return new WaitForSeconds(0.15f);
-        if(stepping)
-        {
-            canDash = false;
-        }
-    }
-
-    public void endDash()
-    {
-        anim.SetBool("Dash", false);
-    }
-
-    private void touchFloor()
-    {
-        canDash = false;
-        doingDash = false;
     }
 
     private void Movement()
@@ -138,17 +66,9 @@ public class PlayerController : MonoBehaviour
             }
         } 
 
-        if(Input.GetKeyDown(KeyCode.X) && !doingDash)
-         {
-            if(xRaw != 0 || yRaw != 0)
-            {
-                Dash(xRaw, yRaw);
-            }
-         }
-
         if(stepping && !floorStep)
         {
-            touchFloor();
+
             floorStep = true;
         }
 
@@ -185,7 +105,7 @@ public class PlayerController : MonoBehaviour
 
     private void Walk()
     {
-        if(canMove && !doingDash)
+        if(canMove)
         {
             rb.velocity = new Vector2(direction.x * movementSpeed, rb.velocity.y);
 
