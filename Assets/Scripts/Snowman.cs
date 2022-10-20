@@ -49,7 +49,7 @@ public class Snowman : MonoBehaviour
             Vector2 direccionNormalizada = direccion.normalized;
             CambiarVista(direccionNormalizada.x);
 
-            if(lanzandoFlecha)
+            if(!lanzandoFlecha)
             {
                 StartCoroutine(LanzarFlecha(direccion, distanciaActual));
             }else
