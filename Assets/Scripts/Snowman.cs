@@ -96,8 +96,8 @@ public class Snowman : MonoBehaviour
         direccionFlecha = direccionFlecha.normalized;
 
         GameObject flechaGo = Instantiate(flecha, transform.position, Quaternion.identity);
-        //flechaGo.transform.GetComponent<Flecha>().direccionFlecha = direccionFlecha;
-        //flechaGo.transform.GetComponent<Flecha>().snowmanObj = this.gameObject;
+        flechaGo.transform.GetComponent<Snowball>().direccionFlecha = direccionFlecha;
+        flechaGo.transform.GetComponent<Snowball>().snowman = this.gameObject;
 
         flechaGo.transform.GetComponent<Rigidbody2D>().velocity = direccionFlecha * fuerzaLanzamiento;
         lanzandoFlecha = false;

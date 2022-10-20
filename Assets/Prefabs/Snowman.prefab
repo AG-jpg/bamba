@@ -134,3 +134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76eee7977e53146a6a1fa607c2d72314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanciaDeteccionJugador: 15
+  distanciaDeteccionFlecha: 10
+  flecha: {fileID: 528402709279918096, guid: d026f41f0069c43b5b8f5379a5a9ad19, type: 3}
+  fuerzaLanzamiento: 40
+  velocidadMovimiento: 2
+  lanzandoFlecha: 0
