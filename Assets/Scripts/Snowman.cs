@@ -12,8 +12,8 @@ public class Snowman : MonoBehaviour
     private CinemachineVirtualCamera cm;
     private bool aplicarFuerza;
 
-    public float distanciaDeteccionJugador = 5;
-    public float distanciaDeteccionFlecha = 6;
+    public float distanciaDeteccionJugador = 6;
+    public float distanciaDeteccionFlecha = 5;
     public GameObject flecha;
     public float fuerzaLanzamiento = 5;
     public float velocidadMovimiento;
@@ -44,7 +44,7 @@ public class Snowman : MonoBehaviour
         if(distanciaActual <= distanciaDeteccionFlecha)
         {
             rb.velocity = Vector2.zero;
-            anim.SetBool("walking", false);
+            anim.SetBool("Walking", false);
 
             Vector2 direccionNormalizada = direccion.normalized;
             CambiarVista(direccionNormalizada.x);
@@ -59,11 +59,11 @@ public class Snowman : MonoBehaviour
                     Vector2 movimiento = new Vector2(direccion.x, 0);
                     movimiento = movimiento.normalized;
                     rb.velocity = movimiento * velocidadMovimiento;
-                    anim.SetBool("walking", true);
+                    anim.SetBool("Walking", true);
                     CambiarVista(movimiento.x);
                 } else
                 {
-                    anim.SetBool("walking", false);
+                    anim.SetBool("Walking", false);
                 }
             }
         }
@@ -90,9 +90,9 @@ public class Snowman : MonoBehaviour
     private IEnumerator LanzarFlecha(Vector2 direccionFlecha, float distancia)
     {
         lanzandoFlecha = true;
-        anim.SetBool("disparando", true);
+        anim.SetBool("Disparando", true);
         yield return new WaitForSeconds(1.42f);
-        anim.SetBool("disparando", false);
+        anim.SetBool("Disparando", false);
         direccionFlecha = direccionFlecha.normalized;
 
         GameObject flechaGo = Instantiate(flecha, transform.position, Quaternion.identity);
