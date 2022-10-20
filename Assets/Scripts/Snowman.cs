@@ -12,8 +12,8 @@ public class Snowman : MonoBehaviour
     private CinemachineVirtualCamera cm;
     private bool aplicarFuerza;
 
-    public float distanciaDeteccionJugador = 15;
-    public float distanciaDeteccionFlecha = 10;
+    public float distanciaDeteccionJugador = 5;
+    public float distanciaDeteccionFlecha = 6;
     public GameObject flecha;
     public float fuerzaLanzamiento = 5;
     public float velocidadMovimiento;
