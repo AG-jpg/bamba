@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public Vector2 direction;
     private CinemachineVirtualCamera cm;
     private AudioSource jumpfx;
+    private GrayCamera gc;
+    private Vector2 damageDirection;
 
     [Header ("Stadistics")]
     public float movementSpeed = 10;
@@ -27,11 +29,13 @@ public class PlayerController : MonoBehaviour
     public bool stepping = true;
     public bool floorStep;
     public bool canDie;
+    public bool applyForce;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         cm = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
+        gc = Camera.main.GetComponent<GrayCamera>();
     }
 
     public void Die()
@@ -56,8 +60,18 @@ public class PlayerController : MonoBehaviour
     {
         if(canDie)
         {
-            StartCoroutine(Immortal());
+            //StartCoroutine(Immortal());
             life--;
+            gc.enabled = true;
+            float AuxiliarSpeed = movementSpeed;
+            this.damageDirection = damageDirection;
+            applyForce = true;
+            Time.timeScale = 0.5f;
+            yield return new WaitForSeconds(0.2f);
+            Time.timeScale = 1;
+            gc.enabled = false;
+
+           // for(int i = )
         }
     }
 
