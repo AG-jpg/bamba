@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [Header ("Stadistics")]
     public float movementSpeed = 10;
     public float jumpForce = 5;
+    public int life = 3;
 
     [Header ("Collisions")]
     public Vector2 down;
@@ -25,11 +26,39 @@ public class PlayerController : MonoBehaviour
     public bool canMove = true;
     public bool stepping = true;
     public bool floorStep;
+    public bool canDie;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         cm = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
+    }
+
+    public void Die()
+    {
+        if(life > 0)
+        return;
+
+        this.enabled = false;
+    }
+
+    public void RecibirDano()
+    {
+        StartCoroutine(DamageImpact(Vector2.zero));
+    }
+
+    public void RecibirDano(Vector2 damageDirection)
+    {
+        StartCoroutine(DamageImpact(damageDirection));
+    }
+
+    private IEnumerator DamageImpact(Vector2 damageDirection)
+    {
+        if(canDie)
+        {
+            StartCoroutine(Immortal());
+            life--;
+        }
     }
 
     // Start is called before the first frame update
