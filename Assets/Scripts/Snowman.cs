@@ -107,7 +107,7 @@ public class Snowman : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            //Daño al jugador player.RecibirDaño((transform.position - player.transform.position).normalized);
+            player.RecibirDano((transform.position - player.transform.position).normalized);
         }
     }
 

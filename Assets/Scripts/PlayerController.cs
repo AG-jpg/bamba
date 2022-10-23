@@ -11,12 +11,14 @@ public class PlayerController : MonoBehaviour
     private CinemachineVirtualCamera cm;
     private AudioSource jumpfx;
     private GrayCamera gc;
+    private SpriteRenderer sprite;
     private Vector2 damageDirection;
 
     [Header ("Stadistics")]
     public float movementSpeed = 10;
     public float jumpForce = 5;
-    public int life = 3;
+    public int vidas = 3;
+    public float ImmortalTime;
 
     [Header ("Collisions")]
     public Vector2 down;
@@ -28,7 +30,7 @@ public class PlayerController : MonoBehaviour
     public bool canMove = true;
     public bool stepping = true;
     public bool floorStep;
-    public bool canDie;
+    public bool Immortal;
     public bool applyForce;
 
     private void Awake() {
@@ -36,11 +38,12 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         cm = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
         gc = Camera.main.GetComponent<GrayCamera>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     public void Die()
     {
-        if(life > 0)
+        if(vidas > 0)
         return;
 
         this.enabled = false;
@@ -58,21 +61,54 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator DamageImpact(Vector2 damageDirection)
     {
-        if(canDie)
+        if(!Immortal)
         {
-            //StartCoroutine(Immortal());
-            life--;
+            StartCoroutine(Immortalities());
+            vidas--;
             gc.enabled = true;
             float AuxiliarSpeed = movementSpeed;
             this.damageDirection = damageDirection;
             applyForce = true;
-            Time.timeScale = 0.5f;
+            Time.timeScale = 0.4f;
             yield return new WaitForSeconds(0.2f);
             Time.timeScale = 1;
             gc.enabled = false;
 
-           // for(int i = )
+            for(int i = GameManager.instance.vidasUI.transform.childCount -1; i >= 0; i--)
+            {
+                if(GameManager.instance.vidasUI.transform.GetChild(i).gameObject.activeInHierarchy)
+                {
+                    GameManager.instance.vidasUI.transform.GetChild(i).gameObject.SetActive(false);
+                    break;
+                }
+            }
+
+            movementSpeed = AuxiliarSpeed;
+            Die();
         }
+    }
+
+    public void Immortality()
+    {
+        StartCoroutine(Immortalities());
+    }
+
+    private IEnumerator Immortalities()
+    {
+        Immortal = true;
+
+        float passedTime = 0;
+
+        while (passedTime < ImmortalTime)
+        {
+            sprite.color = new Color(1, 1, 1, .5f);
+            yield return new WaitForSeconds(ImmortalTime / 20);
+            sprite.color = new Color(1, 1, 1, 1);
+            yield return new WaitForSeconds(ImmortalTime / 20);
+            passedTime += ImmortalTime / 10;
+        }
+
+        Immortal = false;
     }
 
     // Start is called before the first frame update

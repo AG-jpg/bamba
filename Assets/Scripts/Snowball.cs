@@ -25,7 +25,7 @@ public class Snowball : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            //collision.GetComponent<PlayerController>().RecibirDano(-(collision.transform.position - snowman.transform,position).normalized);
+            collision.GetComponent<PlayerController>().RecibirDano(-(collision.transform.position - snowman.transform.position).normalized);
             snow.Play();
             Destroy(this.gameObject);
         }
