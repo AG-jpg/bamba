@@ -88,6 +88,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void FixedUpdate() 
+    {
+        if(applyForce)
+        {
+            movementSpeed = 0;
+            rb.velocity = Vector2.zero;
+            rb.AddForce(-damageDirection * 25, ForceMode2D.Impulse);
+            applyForce = false;
+        }
+    }
+
     public void Immortality()
     {
         StartCoroutine(Immortalities());
