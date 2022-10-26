@@ -20,6 +20,11 @@ public class Snowman : MonoBehaviour
     public float velocidadMovimiento;
     public bool lanzandoFlecha;
 
+    //Sounds
+    [Header ("Audio")]
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip slam;
+
     private void Awake() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
@@ -33,6 +38,7 @@ public class Snowman : MonoBehaviour
     void Start()
     {
         gameObject.name = "Snowman";
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -109,6 +115,7 @@ public class Snowman : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            audioSource.PlayOneShot(slam);
             player.RecibirDano((transform.position - player.transform.position).normalized);
         }
     }
