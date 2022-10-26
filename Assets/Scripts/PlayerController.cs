@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     public Vector2 direction;
     private CinemachineVirtualCamera cm;
-    private AudioSource jumpfx;
     private GrayCamera gc;
     private SpriteRenderer sprite;
     private Vector2 damageDirection;
@@ -32,6 +31,12 @@ public class PlayerController : MonoBehaviour
     public bool floorStep;
     public bool Immortal;
     public bool applyForce;
+
+    [Header ("Audio")]
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip jump;
+    [SerializeField] private AudioClip coin;
+    [SerializeField] private AudioClip snow;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -125,7 +130,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        jumpfx = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -152,7 +157,7 @@ public class PlayerController : MonoBehaviour
             if(stepping)
             {
                 Jump();
-                jumpfx.Play();
+                audioSource.PlayOneShot(jump);
             }
         } 
 
@@ -222,5 +227,18 @@ public class PlayerController : MonoBehaviour
             }
         }
         
+    }
+
+    //Sounds
+    private void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if(collision.CompareTag("Coin"))
+        {
+           audioSource.PlayOneShot(coin);
+        }
+        else if(collision.CompareTag("Snowball"))
+        {
+            audioSource.PlayOneShot(snow);
+        }
     }
 }

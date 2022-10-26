@@ -6,7 +6,6 @@ public class Snowball : MonoBehaviour
 {
     private Rigidbody2D rb;
     private BoxCollider2D bc;
-    private AudioSource snow;
 
     public GameObject snowman;
     public LayerMask layerFloor;
@@ -18,7 +17,6 @@ public class Snowball : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
-        snow = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) 
@@ -26,7 +24,6 @@ public class Snowball : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerController>().RecibirDano(-(collision.transform.position - snowman.transform.position).normalized);
-            snow.Play();
             Destroy(this.gameObject);
         }
     }
