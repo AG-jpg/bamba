@@ -7,6 +7,7 @@ public class Snowman : MonoBehaviour
 {
     private PlayerController player;
     private Rigidbody2D rb;
+    private BoxCollider2D head;
     private SpriteRenderer sp;
     private Animator anim;
     private CinemachineVirtualCamera cm;
@@ -22,6 +23,7 @@ public class Snowman : MonoBehaviour
     private void Awake() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
+        head = GetComponent<BoxCollider2D>();
         sp = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         cm = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
@@ -108,6 +110,15 @@ public class Snowman : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             player.RecibirDano((transform.position - player.transform.position).normalized);
+        }
+    }
+
+    //Snowman Dies
+    private void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if(collision.CompareTag("Attack"))
+        {
+            Destroy(gameObject);
         }
     }
 

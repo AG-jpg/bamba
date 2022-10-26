@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [Header ("Stadistics")]
     public float movementSpeed = 10;
     public float jumpForce = 5;
-    public int vidas = 3;
+    public int vidas = 5;
     public float ImmortalTime;
 
     [Header ("Collisions")]
