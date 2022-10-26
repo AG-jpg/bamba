@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public GameObject snowman;
+    //Sounds
+    [Header ("Audio")]
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip stomp;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Enemy")
         {
-            Destroy(snowman);
+            audioSource.PlayOneShot(stomp);
         }
     }
 }
