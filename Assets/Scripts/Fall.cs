@@ -5,6 +5,7 @@ using UnityEngine;
 public class Fall : MonoBehaviour
 {
     public GameObject checkpoint;
+
     [Header ("Audio")]
     private AudioSource audioSource;
     [SerializeField] private AudioClip fall;
@@ -19,14 +20,17 @@ public class Fall : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             audioSource.PlayOneShot(fall);
-            WaitTime();
+            StartCoroutine(WaitTime());
             collision.transform.position = checkpoint.transform.position;
             collision.GetComponent<PlayerController>().RecibirDano();
+        }else  if(collision.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
         }
     }
 
     private IEnumerator WaitTime()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
     }
 }

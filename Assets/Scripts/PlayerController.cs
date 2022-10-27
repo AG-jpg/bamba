@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
         return;
 
         this.enabled = false;
+        SceneManager.LoadScene(0);
     }
 
     public void RecibirDano()
