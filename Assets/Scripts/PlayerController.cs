@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         return;
 
         this.enabled = false;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 
     public void RecibirDano()
