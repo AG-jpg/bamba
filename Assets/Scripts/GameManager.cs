@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     public PlayerController player;
     public Text textCoin;
     public int coins;
+    public GameObject pausePanel;
 
     private void Awake() 
     {
@@ -28,5 +30,27 @@ public class GameManager : MonoBehaviour
     {
         coins++;
         textCoin.text = coins.ToString();
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        pausePanel.SetActive(true);
+    }
+
+    public void FinishPause()
+    {
+        Time.timeScale = 1;
+        pausePanel.SetActive(false);
+    }
+
+    public void BackMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
