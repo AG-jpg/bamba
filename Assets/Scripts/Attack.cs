@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    //Object
+    public GameObject particles;
 
     //Sounds
     [Header ("Audio")]
@@ -20,6 +22,7 @@ public class Attack : MonoBehaviour
         if(other.tag == "Enemy")
         {
             audioSource.PlayOneShot(stomp);
+            Instantiate(particles, transform.position, transform.rotation);
         }
     }
 }
