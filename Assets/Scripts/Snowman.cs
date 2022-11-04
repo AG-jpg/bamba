@@ -66,7 +66,7 @@ public class Snowman : MonoBehaviour
                 {
                     Vector2 movimiento = new Vector2(direccion.x, 0);
                     movimiento = movimiento.normalized;
-                    rb.velocity = movimiento * velocidadMovimiento;
+                    rb.velocity = new Vector2(movimiento.x * velocidadMovimiento, rb.velocity.y);
                     anim.SetBool("Walking", true);
                     CambiarVista(movimiento.x);
                 } else
@@ -98,9 +98,8 @@ public class Snowman : MonoBehaviour
     private IEnumerator LanzarFlecha(Vector2 direccionFlecha, float distancia)
     {
         lanzandoFlecha = true;
-        anim.SetBool("Disparando", true);
         yield return new WaitForSeconds(1.42f);
-        anim.SetBool("Disparando", false);
+        direccionFlecha = (player.transform.position - transform.position).normalized * distanciaDeteccionFlecha;
         direccionFlecha = direccionFlecha.normalized;
 
         GameObject flechaGo = Instantiate(flecha, transform.position, Quaternion.identity);
