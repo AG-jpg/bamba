@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class Snowman : MonoBehaviour
+public class Golem : MonoBehaviour
 {
     private PlayerController player;
     private Rigidbody2D rb;
@@ -24,11 +24,11 @@ public class Snowman : MonoBehaviour
     [Header ("Audio")]
     private AudioSource audioSource;
     [SerializeField] private AudioClip slam;
+    [SerializeField] private AudioClip rocks;
 
     private void Awake() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
-        head = GetComponent<BoxCollider2D>();
         sp = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         cm = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
@@ -37,7 +37,7 @@ public class Snowman : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.name = "Snowman";
+        gameObject.name = "Golem";
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -57,7 +57,7 @@ public class Snowman : MonoBehaviour
             Vector2 direccionNormalizada = direccion.normalized;
             CambiarVista(direccionNormalizada.x);
 
-            if(!lanzandoFlecha)
+            if(lanzandoFlecha)
             {
                 StartCoroutine(LanzarFlecha(direccion, distanciaActual));
             }else
@@ -81,7 +81,7 @@ public class Snowman : MonoBehaviour
         {
             if(direccionX < 0 && transform.localScale.x > 0)
             {
-                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
             }else if(direccionX > 0 && transform.localScale.x < 0)
             {
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
@@ -103,8 +103,8 @@ public class Snowman : MonoBehaviour
         direccionFlecha = direccionFlecha.normalized;
 
         GameObject flechaGo = Instantiate(flecha, transform.position, Quaternion.identity);
-        flechaGo.transform.GetComponent<Snowball>().direccionFlecha = direccionFlecha;
-        flechaGo.transform.GetComponent<Snowball>().snowman = this.gameObject;
+        flechaGo.transform.GetComponent<Stone>().direccionFlecha = direccionFlecha;
+        flechaGo.transform.GetComponent<Stone>().golem = this.gameObject;
 
         flechaGo.transform.GetComponent<Rigidbody2D>().velocity = direccionFlecha * fuerzaLanzamiento;
         lanzandoFlecha = false;
@@ -119,11 +119,12 @@ public class Snowman : MonoBehaviour
         }
     }
 
-    //Snowman Dies
+    //Golem Dies
     private void OnTriggerEnter2D(Collider2D collision) 
     {
         if(collision.CompareTag("Attack"))
         {
+            audioSource.PlayOneShot(rocks);
             Destroy(gameObject);
         }
     }
