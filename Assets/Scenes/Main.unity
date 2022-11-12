@@ -21729,7 +21729,7 @@ Transform:
   - {fileID: 1516208435}
   - {fileID: 1877229570}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1935008501
 PrefabInstance:
@@ -23299,13 +23299,17 @@ PrefabInstance:
       propertyPath: particles
       value: 
       objectReference: {fileID: 3020058892947257623, guid: d0659a0bb43154296b4d7e8293ab333d, type: 3}
+    - target: {fileID: 1435817796532550497, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: snow
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a1df9b9305dc402da9c03f747eceb5d, type: 3}
     - target: {fileID: 1435817796532550498, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1435817796532550501, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1435817796532550501, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
       propertyPath: m_LocalPosition.x

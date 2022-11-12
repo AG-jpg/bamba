@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1075697085006875361}
   - component: {fileID: 781721759092467923}
   m_Layer: 7
-  m_Name: Snowman
+  m_Name: Golem
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8463e5c2026434e7383dfa454c0116d7, type: 3}
+  m_Sprite: {fileID: 135478687, guid: 60a3f3c995d2f4aa0ad40828f9d6c396, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanciaDeteccionJugador: 5
   distanciaDeteccionFlecha: 6
-  flecha: {fileID: 528402709279918096, guid: d026f41f0069c43b5b8f5379a5a9ad19, type: 3}
+  flecha: {fileID: 528402709279918096, guid: 04691a68eec9444399200294446a4fd6, type: 3}
   fuerzaLanzamiento: 40
   velocidadMovimiento: 2
   lanzandoFlecha: 0
@@ -251,7 +251,7 @@ Animator:
   m_GameObject: {fileID: 458515838856208517}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9b1aadce30c534fb88dbaaf43184ef10, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3c5b09e7d73a74accb591a38e1fe80bd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
