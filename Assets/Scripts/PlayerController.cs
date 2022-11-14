@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip jump;
     [SerializeField] private AudioClip coin;
     [SerializeField] private AudioClip snow;
+    [SerializeField] private AudioClip stone;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -241,6 +242,10 @@ public class PlayerController : MonoBehaviour
         else if(collision.CompareTag("Snowball"))
         {
             audioSource.PlayOneShot(snow);
+        }
+        else if(collision.CompareTag("Stone"))
+        {
+            audioSource.PlayOneShot(stone);
         }
     }
 }

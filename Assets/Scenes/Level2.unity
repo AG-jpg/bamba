@@ -16594,6 +16594,14 @@ PrefabInstance:
       propertyPath: particles
       value: 
       objectReference: {fileID: 3020058892947257623, guid: 6692dc685fcd54d58b155a8ca8224453, type: 3}
+    - target: {fileID: 1435817796532550497, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: snow
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a1df9b9305dc402da9c03f747eceb5d, type: 3}
+    - target: {fileID: 1435817796532550497, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: stone
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c543ebea20b646af905eba359458b4d, type: 3}
     - target: {fileID: 1435817796532550498, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
       propertyPath: m_Name
       value: Player
