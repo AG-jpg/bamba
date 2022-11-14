@@ -3002,7 +3002,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0233917, y: 1}
+    m_SensorSize: {x: 2.0097466, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4116,7 +4116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5121326, y: 1.0415051, z: -10}
+  m_LocalPosition: {x: -7.5803614, y: 1.0415051, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23296,6 +23296,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1435817796239469019, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: rock
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c543ebea20b646af905eba359458b4d, type: 3}
+    - target: {fileID: 1435817796239469019, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: snow
+      value: 
+      objectReference: {fileID: 3020058892947257623, guid: d0659a0bb43154296b4d7e8293ab333d, type: 3}
+    - target: {fileID: 1435817796239469019, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: pebbles
+      value: 
+      objectReference: {fileID: 3020058892947257623, guid: 6692dc685fcd54d58b155a8ca8224453, type: 3}
+    - target: {fileID: 1435817796239469019, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
       propertyPath: particles
       value: 
       objectReference: {fileID: 3020058892947257623, guid: d0659a0bb43154296b4d7e8293ab333d, type: 3}
@@ -23303,6 +23315,10 @@ PrefabInstance:
       propertyPath: snow
       value: 
       objectReference: {fileID: 8300000, guid: 8a1df9b9305dc402da9c03f747eceb5d, type: 3}
+    - target: {fileID: 1435817796532550497, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: stone
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c543ebea20b646af905eba359458b4d, type: 3}
     - target: {fileID: 1435817796532550498, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
       propertyPath: m_Name
       value: Player

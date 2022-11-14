@@ -72,8 +72,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9ddd8dcb39b44828540a102d7ee9a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particles: {fileID: 0}
+  pebbles: {fileID: 0}
+  snow: {fileID: 0}
   stomp: {fileID: 8300000, guid: e009f7f5e93ef4b38b7d12ba68cbce47, type: 3}
+  rock: {fileID: 0}
 --- !u!82 &1435817796239468996
 AudioSource:
   m_ObjectHideFlags: 0
@@ -336,7 +338,8 @@ MonoBehaviour:
   applyForce: 0
   jump: {fileID: 8300000, guid: d2a8ee93f979d48929e7aec11d0ad5fc, type: 3}
   coin: {fileID: 8300000, guid: 5df8df4db7fac4e47ab4e2aa760eaf28, type: 3}
-  snow: {fileID: 8300000, guid: 7c543ebea20b646af905eba359458b4d, type: 3}
+  snow: {fileID: 8300000, guid: 8a1df9b9305dc402da9c03f747eceb5d, type: 3}
+  stone: {fileID: 8300000, guid: 7c543ebea20b646af905eba359458b4d, type: 3}
 --- !u!95 &1435817796532550500
 Animator:
   serializedVersion: 4

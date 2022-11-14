@@ -16587,9 +16587,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 7c543ebea20b646af905eba359458b4d, type: 3}
     - target: {fileID: 1435817796239469019, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
-      propertyPath: stomp
+      propertyPath: rock
       value: 
       objectReference: {fileID: 8300000, guid: 7c543ebea20b646af905eba359458b4d, type: 3}
+    - target: {fileID: 1435817796239469019, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: snow
+      value: 
+      objectReference: {fileID: 3020058892947257623, guid: d0659a0bb43154296b4d7e8293ab333d, type: 3}
+    - target: {fileID: 1435817796239469019, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: golem
+      value: 
+      objectReference: {fileID: 458515838856208517, guid: 139789ff0e8ce474e89001932139cfc7, type: 3}
+    - target: {fileID: 1435817796239469019, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: stomp
+      value: 
+      objectReference: {fileID: 8300000, guid: e009f7f5e93ef4b38b7d12ba68cbce47, type: 3}
+    - target: {fileID: 1435817796239469019, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: pebbles
+      value: 
+      objectReference: {fileID: 3020058892947257623, guid: 6692dc685fcd54d58b155a8ca8224453, type: 3}
+    - target: {fileID: 1435817796239469019, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: snowman
+      value: 
+      objectReference: {fileID: 458515838856208517, guid: 0ffa51c3e99c940a4aa3805fa39bc779, type: 3}
     - target: {fileID: 1435817796239469019, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
       propertyPath: particles
       value: 

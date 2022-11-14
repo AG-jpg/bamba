@@ -5,24 +5,32 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     //Object
-    public GameObject particles;
+    [Header ("Particles")]
+    public GameObject pebbles;
+    public GameObject snow;
 
     //Sounds
     [Header ("Audio")]
     private AudioSource audioSource;
     [SerializeField] private AudioClip stomp;
+    [SerializeField] private AudioClip rock;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(other.tag == "Enemy")
+        if(collision.CompareTag("Golem"))
+        {
+            audioSource.PlayOneShot(rock);
+            Instantiate(pebbles, transform.position, transform.rotation);
+        } 
+        else if(collision.CompareTag("Snowman"))
         {
             audioSource.PlayOneShot(stomp);
-            Instantiate(particles, transform.position, transform.rotation);
+            Instantiate(snow, transform.position, transform.rotation);
         }
     }
 }
