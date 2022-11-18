@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f8663e0c1934998a4ed4f84b470258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slam: {fileID: 8300000, guid: e009f7f5e93ef4b38b7d12ba68cbce47, type: 3}
-  movementVelocity: 3
+  slam: {fileID: 8300000, guid: e37cfd6799b3f48678fa3fb9500b18f4, type: 3}
+  movementVelocity: 4
   points:
   - {fileID: 0}
   - {fileID: 0}
@@ -164,7 +164,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e009f7f5e93ef4b38b7d12ba68cbce47, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e37cfd6799b3f48678fa3fb9500b18f4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
