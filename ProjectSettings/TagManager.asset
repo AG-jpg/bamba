@@ -9,6 +9,10 @@ TagManager:
   - Coin
   - Snowball
   - Attack
+  - Platform
+  - Snowman
+  - Stone
+  - Golem
   layers:
   - Default
   - TransparentFX
