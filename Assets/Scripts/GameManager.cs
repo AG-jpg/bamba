@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         pausePanel.SetActive(true);
     }
-
+    
     public void FinishPause()
     {
         Time.timeScale = 1;
@@ -48,11 +48,15 @@ public class GameManager : MonoBehaviour
     public void BackMenu()
     {
         SceneManager.LoadScene("Menu");
+        Time.timeScale = 1;
+        pausePanel.SetActive(false);
     }
 
     public void PlayAgain()
     {
         SceneManager.LoadScene("Menu");
+        Time.timeScale = 1;
+        pausePanel.SetActive(false);
     }
 
     public void QuitGame()

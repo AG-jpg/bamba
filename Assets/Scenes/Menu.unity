@@ -373,7 +373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &247090318
 RectTransform:
   m_ObjectHideFlags: 0
@@ -999,9 +999,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidasUI: {fileID: 0}
   player: {fileID: 0}
-  textCoin: {fileID: 0}
-  coins: 0
   pausePanel: {fileID: 1330205438}
+  coins: 0
+  textCoin: {fileID: 0}
 --- !u!4 &752081861
 Transform:
   m_ObjectHideFlags: 0

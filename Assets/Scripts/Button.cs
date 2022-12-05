@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
-
     public void PressButton(int sceneID)
     {
         SceneManager.LoadScene(sceneID);
