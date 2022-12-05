@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     [Header ("Audio")]
     private AudioSource audioSource;
     [SerializeField] private AudioClip jump;
+    [SerializeField] private AudioClip slam;
     [SerializeField] private AudioClip coin;
     [SerializeField] private AudioClip snow;
     [SerializeField] private AudioClip stone;
@@ -133,7 +134,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -247,6 +247,14 @@ public class PlayerController : MonoBehaviour
         else if(collision.CompareTag("Stone"))
         {
             audioSource.PlayOneShot(stone);
+        }
+        else if(collision.CompareTag("Snowman"))
+        {
+            audioSource.PlayOneShot(slam);
+        }
+        else if(collision.CompareTag("Golem"))
+        {
+            audioSource.PlayOneShot(slam);
         }
     }
 }

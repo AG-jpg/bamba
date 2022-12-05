@@ -23,7 +23,6 @@ public class Golem : MonoBehaviour
     //Sounds
     [Header ("Audio")]
     private AudioSource audioSource;
-    [SerializeField] private AudioClip slam;
     [SerializeField] private AudioClip rocks;
 
     private void Awake() {
@@ -114,7 +113,6 @@ public class Golem : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            audioSource.PlayOneShot(slam);
             player.RecibirDano((transform.position - player.transform.position).normalized);
         }
     }
