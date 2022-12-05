@@ -9,11 +9,13 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameObject vidasUI;
     public PlayerController player;
-    public Text textCoin;
-    public int coins;
     public GameObject pausePanel;
 
-    private void Awake() 
+    [Header("Coins Panel")]
+    public int coins;
+    public Text textCoin;
+
+     private void Awake() 
     {
 
         if(instance == null)
@@ -23,7 +25,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
     }
 
     public void UpdateCoinCounter()
