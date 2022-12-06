@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 5;
     public int vidas = 3;
     public float ImmortalTime;
+    public int vidasRestantes;
 
     [Header ("Collisions")]
     public Vector2 down;
@@ -134,6 +135,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         audioSource = GetComponent<AudioSource>();
     }
 
