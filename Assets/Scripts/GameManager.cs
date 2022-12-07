@@ -33,12 +33,6 @@ public class GameManager : MonoBehaviour
         textCoin.text = coins.ToString();
     }
 
-    public void PauseGame()
-    {
-        Time.timeScale = 0;
-        pausePanel.SetActive(true);
-    }
-    
     public void FinishPause()
     {
         Time.timeScale = 1;

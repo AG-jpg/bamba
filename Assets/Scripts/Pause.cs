@@ -6,20 +6,17 @@ public class Pause : MonoBehaviour
 {
     public GameObject pausePanel;
     
-    private void Awake()
+    private void Update() 
     {
-        Time.timeScale = 1;
-        pausePanel.SetActive(false);
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            PauseGame();
+        }
     }
 
-    public void PauseGame()
+        public void PauseGame()
     {
         Time.timeScale = 0;
         pausePanel.SetActive(true);
-    }
-
-    public void PressButton()
-    {
-        PauseGame();
     }
 }
