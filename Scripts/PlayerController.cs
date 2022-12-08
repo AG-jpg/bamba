@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip snow;
     [SerializeField] private AudioClip stone;
 
-    private void Awake() {
+    void Awake() {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         cm = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
@@ -135,7 +135,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
         audioSource = GetComponent<AudioSource>();
     }
 
