@@ -24,11 +24,6 @@ public class GrayCamera : MonoBehaviour
 
     void Start()
     {
-        if (!SystemInfo.supportsImageEffects)
-        {
-            enabled = false;
-            return;
-        }
         if (!curShader && !curShader.isSupported)
         {
             enabled = false;

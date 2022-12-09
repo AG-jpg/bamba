@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
     private Rigidbody2D rb;
     private Animator anim;
     public Vector2 direction;
@@ -14,27 +15,27 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer sprite;
     private Vector2 damageDirection;
 
-    [Header ("Stadistics")]
+    [Header("Stadistics")]
     public float movementSpeed = 10;
     public float jumpForce = 5;
     public int vidas = 5;
     public float ImmortalTime;
     public int vidasRestantes;
 
-    [Header ("Collisions")]
+    [Header("Collisions")]
     public Vector2 down;
     public float radiusDetection;
     public LayerMask FloorLayer;
-    
 
-    [Header ("Booleans")]
+
+    [Header("Booleans")]
     public bool canMove = true;
     public bool stepping = true;
     public bool floorStep;
     public bool Immortal;
     public bool applyForce;
 
-    [Header ("Audio")]
+    [Header("Audio")]
     private AudioSource audioSource;
     [SerializeField] private AudioClip jump;
     [SerializeField] private AudioClip slam;
@@ -42,18 +43,28 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip snow;
     [SerializeField] private AudioClip stone;
 
-    private void Awake() {
+    private void Awake()
+    {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         cm = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
         gc = Camera.main.GetComponent<GrayCamera>();
         sprite = GetComponent<SpriteRenderer>();
+
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     public void Die()
     {
-        if(vidas > 0)
-        return;
+        if (vidas > 0)
+            return;
 
         this.enabled = false;
         SceneManager.LoadScene(2);
@@ -71,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator DamageImpact(Vector2 damageDirection)
     {
-        if(!Immortal)
+        if (!Immortal)
         {
             StartCoroutine(Immortalities());
             vidas--;
@@ -84,9 +95,9 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 1;
             gc.enabled = false;
 
-            for(int i = GameManager.instance.vidasUI.transform.childCount -1; i >= 0; i--)
+            for (int i = GameManager.instance.vidasUI.transform.childCount - 1; i >= 0; i--)
             {
-                if(GameManager.instance.vidasUI.transform.GetChild(i).gameObject.activeInHierarchy)
+                if (GameManager.instance.vidasUI.transform.GetChild(i).gameObject.activeInHierarchy)
                 {
                     GameManager.instance.vidasUI.transform.GetChild(i).gameObject.SetActive(false);
                     break;
@@ -98,9 +109,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate() 
+    private void FixedUpdate()
     {
-        if(applyForce)
+        if (applyForce)
         {
             movementSpeed = 0;
             rb.velocity = Vector2.zero;
@@ -135,7 +146,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -144,6 +154,7 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
         Anchor();
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Movement()
@@ -158,22 +169,22 @@ public class PlayerController : MonoBehaviour
 
         Walk();
         improvedJump();
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(stepping)
+            if (stepping)
             {
                 Jump();
                 audioSource.PlayOneShot(jump);
             }
-        } 
+        }
 
-        if(stepping && !floorStep)
+        if (stepping && !floorStep)
         {
 
             floorStep = true;
         }
 
-        if(!stepping && floorStep)
+        if (!stepping && floorStep)
         {
             stepping = false;
         }
@@ -182,12 +193,12 @@ public class PlayerController : MonoBehaviour
     private void improvedJump()
     {
 
-        
-        if(rb.velocity.y < 0)
+
+        if (rb.velocity.y < 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (2.5f - 1) * Time.deltaTime;
         }
-        else if(rb.velocity.y > 0 && !Input.GetKeyDown(KeyCode.Space))
+        else if (rb.velocity.y > 0 && !Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (2.0f - 1) * Time.deltaTime;
         }
@@ -206,13 +217,13 @@ public class PlayerController : MonoBehaviour
 
     private void Walk()
     {
-        if(canMove)
+        if (canMove)
         {
             rb.velocity = new Vector2(direction.x * movementSpeed, rb.velocity.y);
 
-            if(direction != Vector2.zero)
+            if (direction != Vector2.zero)
             {
-                if(!stepping)
+                if (!stepping)
                 {
                     anim.SetBool("Standing", true);
                 }
@@ -220,41 +231,43 @@ public class PlayerController : MonoBehaviour
                 {
                     anim.SetBool("Walk", true);
                 }
-                if(direction.x < 0 && transform.localScale.x > 0)
+                if (direction.x < 0 && transform.localScale.x > 0)
                 {
                     transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-                } else if(direction.x > 0 && transform.localScale.x < 0)
-                {
-                     transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 }
-            } else
+                else if (direction.x > 0 && transform.localScale.x < 0)
+                {
+                    transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                }
+            }
+            else
             {
                 anim.SetBool("Walk", false);
             }
         }
-        
+
     }
 
     //Sounds
-    private void OnTriggerEnter2D(Collider2D collision) 
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Coin"))
+        if (collision.CompareTag("Coin"))
         {
-           audioSource.PlayOneShot(coin);
+            audioSource.PlayOneShot(coin);
         }
-        else if(collision.CompareTag("Snowball"))
+        else if (collision.CompareTag("Snowball"))
         {
             audioSource.PlayOneShot(snow);
         }
-        else if(collision.CompareTag("Stone"))
+        else if (collision.CompareTag("Stone"))
         {
             audioSource.PlayOneShot(stone);
         }
-        else if(collision.CompareTag("Snowman"))
+        else if (collision.CompareTag("Snowman"))
         {
             audioSource.PlayOneShot(slam);
         }
-        else if(collision.CompareTag("Golem"))
+        else if (collision.CompareTag("Golem"))
         {
             audioSource.PlayOneShot(slam);
         }

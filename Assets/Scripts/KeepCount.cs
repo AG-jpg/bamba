@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class KeepCount : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
     }
