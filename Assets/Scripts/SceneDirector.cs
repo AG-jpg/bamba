@@ -5,11 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class SceneDirector : MonoBehaviour
 {
+    public static SceneDirector instance;
     public GameObject vidasUI;
     public GameObject coinsUI;
+    public GameObject player;
     
     /// Awake is called when the script instance is being loaded.
     private void Awake()
+    {
+
+        if(instance == null)
+        {
+            instance = this;
+        } else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    /// Start is called on the frame when a script is enabled just before
+    private void Start()
     {
         DontDestroyOnLoad(this.gameObject);
     }
@@ -23,14 +38,17 @@ public class SceneDirector : MonoBehaviour
         {
             vidasUI.SetActive(false);
             coinsUI.SetActive(false);
+            player.SetActive(false);
         }else if(scene.name == "Inter")
         {
             vidasUI.SetActive(false);
             coinsUI.SetActive(false);
+            player.SetActive(false);
         }else if(scene.name == "Game Over")
         {
             vidasUI.SetActive(false);
             coinsUI.SetActive(false);
+            player.SetActive(false);
         }
     }
 }
