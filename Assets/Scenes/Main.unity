@@ -1177,6 +1177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 110209815}
+  - component: {fileID: 110209816}
   m_Layer: 0
   m_Name: SceneDirector
   m_TagString: Untagged
@@ -1199,6 +1200,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &110209816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110209813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ee78336eddc486bb1802e8c0e5152a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidasUI: {fileID: 1621316037}
+  coinsUI: {fileID: 1226733519}
 --- !u!1 &118234316
 GameObject:
   m_ObjectHideFlags: 0
