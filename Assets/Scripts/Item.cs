@@ -5,6 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public PlayerController player;
+    public GameObject heart;
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
@@ -22,6 +23,7 @@ public class Item : MonoBehaviour
         }else if(gameObject.CompareTag("Life"))
         {
             player.AddLife();
+            heart.SetActive(true);
         }
         
         Destroy(gameObject);
