@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip jump;
     [SerializeField] private AudioClip slam;
     [SerializeField] private AudioClip coin;
+    [SerializeField] private AudioClip chimes;
     [SerializeField] private AudioClip snow;
     [SerializeField] private AudioClip stone;
 
@@ -259,6 +260,10 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Coin"))
         {
             audioSource.PlayOneShot(coin);
+        }
+         else if (collision.CompareTag("Life"))
+        {
+            audioSource.PlayOneShot(chimes);
         }
         else if (collision.CompareTag("Snowball"))
         {
