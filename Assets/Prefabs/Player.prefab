@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 1435817796532550497}
   - component: {fileID: 1435817796532550500}
   - component: {fileID: 1435817796532550523}
+  - component: {fileID: -8316417854210072720}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -326,6 +327,7 @@ MonoBehaviour:
   jumpForce: 10
   vidas: 3
   ImmortalTime: 3
+  vidasRestantes: 0
   down: {x: 0, y: -0.8}
   radiusDetection: 0.1
   FloorLayer:
@@ -337,6 +339,7 @@ MonoBehaviour:
   Immortal: 0
   applyForce: 0
   jump: {fileID: 8300000, guid: d2a8ee93f979d48929e7aec11d0ad5fc, type: 3}
+  slam: {fileID: 0}
   coin: {fileID: 8300000, guid: 5df8df4db7fac4e47ab4e2aa760eaf28, type: 3}
   snow: {fileID: 8300000, guid: 8a1df9b9305dc402da9c03f747eceb5d, type: 3}
   stone: {fileID: 8300000, guid: 7c543ebea20b646af905eba359458b4d, type: 3}
@@ -456,3 +459,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-8316417854210072720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435817796532550498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c20518a4f10245c199868268f5f700b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
