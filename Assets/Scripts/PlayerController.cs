@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [Header("Stadistics")]
     public float movementSpeed = 10;
     public float jumpForce = 5;
-    public int vidas = 5;
+    public int vidas = 3;
     public float ImmortalTime;
     public int vidasRestantes;
 
@@ -107,6 +107,11 @@ public class PlayerController : MonoBehaviour
             movementSpeed = AuxiliarSpeed;
             Die();
         }
+    }
+
+    public void AddLife()
+    {
+        vidas++;
     }
 
     private void FixedUpdate()

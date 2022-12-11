@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    public PlayerController player;
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
@@ -18,6 +19,9 @@ public class Item : MonoBehaviour
         if(gameObject.CompareTag("Coin"))
         {
             GameManager.instance.UpdateCoinCounter();
+        }else if(gameObject.CompareTag("Life"))
+        {
+            player.AddLife();
         }
         
         Destroy(gameObject);
