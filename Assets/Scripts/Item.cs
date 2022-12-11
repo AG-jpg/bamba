@@ -6,6 +6,7 @@ public class Item : MonoBehaviour
 {
     public PlayerController player;
     public GameObject heart;
+    public GameObject heartExtra;
 
     //Positions
     private Vector2 positionThree;
@@ -40,7 +41,11 @@ public class Item : MonoBehaviour
         positionTwo = new Vector2(-840f, 372.4404f);
         positionOne = new Vector2(-920f, 372.4404f);
         
-        if(player.vidas == 3)
+        if(player.vidas == 4)
+        {
+            heartExtra.SetActive(true);
+        }
+        else if(player.vidas == 3)
         {
             heart.SetActive(true);
             heart.transform.localPosition = positionThree;
