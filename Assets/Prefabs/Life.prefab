@@ -125,9 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 011ab9e09ea4746ff8d77ae756950db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  heart: {fileID: 0}
-  heartExtra: {fileID: 0}
+  player: {fileID: 1435817796532550497, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+  heart: {fileID: 6161666591936865618, guid: cb02d752be5be4a9db57b65f99ebc01f, type: 3}
+  heartExtra: {fileID: 3635343734773703919, guid: d249e854c8e524201afca6ca3f582f7c, type: 3}
 --- !u!95 &7438075969462166360
 Animator:
   serializedVersion: 4
