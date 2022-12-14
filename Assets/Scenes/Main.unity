@@ -12830,6 +12830,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1237588237 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5170576047104743392, guid: ca075471ce9264204ba2cde9156d9c91, type: 3}
+  m_PrefabInstance: {fileID: 5170576048015167208}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237588231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011ab9e09ea4746ff8d77ae756950db7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1254489941
 GameObject:
   m_ObjectHideFlags: 0
@@ -15476,6 +15487,7 @@ GameObject:
   - component: {fileID: 1608446396}
   - component: {fileID: 1608446395}
   - component: {fileID: 1608446397}
+  - component: {fileID: 1608446398}
   m_Layer: 0
   m_Name: GameManger
   m_TagString: Untagged
@@ -15497,9 +15509,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidasUI: {fileID: 1621316037}
   player: {fileID: 1753299946}
+  item: {fileID: 1237588237}
   pausePanel: {fileID: 855657901}
-  coins: 0
+  coins: 98
   textCoin: {fileID: 510243225}
+  chimes: {fileID: 8300000, guid: 014a59343660040f19d3c30d5955f82c, type: 3}
 --- !u!4 &1608446396
 Transform:
   m_ObjectHideFlags: 0
@@ -15527,6 +15541,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c20518a4f10245c199868268f5f700b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1608446398
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608446394}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 014a59343660040f19d3c30d5955f82c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1609101356 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 458515838856208517, guid: 0ffa51c3e99c940a4aa3805fa39bc779, type: 3}
