@@ -15511,7 +15511,7 @@ MonoBehaviour:
   player: {fileID: 1753299946}
   item: {fileID: 1237588237}
   pausePanel: {fileID: 855657901}
-  coins: 98
+  coins: 0
   textCoin: {fileID: 510243225}
   chimes: {fileID: 8300000, guid: 014a59343660040f19d3c30d5955f82c, type: 3}
 --- !u!4 &1608446396
