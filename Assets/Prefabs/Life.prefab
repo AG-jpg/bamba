@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5170576047104743394}
   - component: {fileID: 5170576047104743393}
   - component: {fileID: 5170576047104743392}
-  - component: {fileID: 7438075969462166360}
+  - component: {fileID: 3354963644294199120}
   m_Layer: 0
   m_Name: Life
   m_TagString: Life
@@ -126,9 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1435817796532550497, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
-  heart: {fileID: 6161666591936865618, guid: cb02d752be5be4a9db57b65f99ebc01f, type: 3}
-  heartExtra: {fileID: 3635343734773703919, guid: d249e854c8e524201afca6ca3f582f7c, type: 3}
---- !u!95 &7438075969462166360
+  gamemanager: {fileID: 2217534066055072765, guid: 91a853baa20ef4039b1e94f18d63c05b, type: 3}
+--- !u!95 &3354963644294199120
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
