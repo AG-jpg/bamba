@@ -20,7 +20,8 @@ public class Snowman : MonoBehaviour
     public float velocidadMovimiento;
     public bool lanzandoFlecha;
 
-    private void Awake() {
+    private void Awake() 
+    {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         head = GetComponent<BoxCollider2D>();
