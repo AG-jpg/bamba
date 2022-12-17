@@ -9,6 +9,7 @@ public class SceneDirector : MonoBehaviour
     public GameObject vidasUI;
     public GameObject coinsUI;
     public GameObject player;
+    public PlayerController controller;
     
     /// Awake is called when the script instance is being loaded.
     private void Awake()
@@ -34,7 +35,10 @@ public class SceneDirector : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
 
-        if(scene.name == "Menu")
+        if(scene.name == "Main")
+        {
+            StartGame();
+        }else if(scene.name == "Menu")
         {
             vidasUI.SetActive(false);
             coinsUI.SetActive(false);
@@ -50,5 +54,12 @@ public class SceneDirector : MonoBehaviour
             coinsUI.SetActive(false);
             player.SetActive(false);
         }
+    }
+
+    public void StartGame()
+    {
+        controller.enabled = true;
+        vidasUI.SetActive(true);
+        coinsUI.SetActive(true);
     }
 }

@@ -56,9 +56,6 @@ public class PlayerController : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-        } else
-        {
-            Destroy(this.gameObject);
         }
     }
 

@@ -77,6 +77,12 @@ public class GameManager : MonoBehaviour
         pausePanel.SetActive(false);
     }
 
+    public void Restart()
+    {
+        coins = 0;
+        textCoin.text = coins.ToString();
+    }
+
     public void QuitGame()
     {
         Application.Quit();
