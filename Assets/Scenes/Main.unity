@@ -1215,6 +1215,8 @@ MonoBehaviour:
   vidasUI: {fileID: 1621316037}
   coinsUI: {fileID: 1226733519}
   player: {fileID: 1078993579}
+  controller: {fileID: 1753299946}
+  gameManager: {fileID: 1608446395}
 --- !u!1 &118234316
 GameObject:
   m_ObjectHideFlags: 0
