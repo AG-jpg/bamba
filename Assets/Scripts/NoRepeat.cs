@@ -1,19 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class NoRepeat : MonoBehaviour
 {
-    public static NoRepeat instance;
+    public AudioListener listener;
+    
    private void Awake() 
     {
+        listener = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioListener>();
 
-        if(instance == null)
+        if(listener.enabled = true)
         {
-            instance = this;
+            Console.Write("There is a Listener");
         } else
         {
-            Destroy(this.gameObject);
+            listener.enabled = false;
         }
     }
 }
