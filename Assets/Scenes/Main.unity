@@ -22868,7 +22868,6 @@ Transform:
   - {fileID: 1740961308}
   - {fileID: 964352637}
   - {fileID: 864792611}
-  - {fileID: 1415810039}
   - {fileID: 1075231428}
   - {fileID: 2125314493}
   - {fileID: 1184811679}
@@ -22886,9 +22885,10 @@ Transform:
   - {fileID: 471235898}
   - {fileID: 779612846}
   - {fileID: 1684748704}
-  - {fileID: 1138789573}
   - {fileID: 1516208435}
+  - {fileID: 1138789573}
   - {fileID: 1877229570}
+  - {fileID: 1415810039}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
