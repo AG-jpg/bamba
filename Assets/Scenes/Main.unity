@@ -6369,7 +6369,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: Not everyone in the snowy lands is friendly
+  m_Text: Not everyone is friendly in the snowy lands
 --- !u!222 &697439693
 CanvasRenderer:
   m_ObjectHideFlags: 0
