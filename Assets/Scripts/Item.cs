@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Item : MonoBehaviour
 {
@@ -40,6 +41,10 @@ public class Item : MonoBehaviour
         else if(player.vidas == 3)
         {
             GameManager.instance.ShowLifeFour();
+        }
+        else if(player.vidas == 3)
+        {
+            GameManager.instance.ShowLifeThree();
         }
         else if(player.vidas == 2)
         {
