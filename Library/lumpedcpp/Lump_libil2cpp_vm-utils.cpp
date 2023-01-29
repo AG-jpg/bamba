@@ -1,0 +1,8 @@
+#include "il2cpp-config.h"
+#include "/Volumes/RESPALDO/Code/Unity/2020.3.25f1/Unity.app/Contents/il2cpp/libil2cpp/vm-utils/BlobReader.cpp"
+#include "/Volumes/RESPALDO/Code/Unity/2020.3.25f1/Unity.app/Contents/il2cpp/libil2cpp/vm-utils/Debugger.cpp"
+#include "/Volumes/RESPALDO/Code/Unity/2020.3.25f1/Unity.app/Contents/il2cpp/libil2cpp/vm-utils/NativeDelegateMethodCache.cpp"
+#include "/Volumes/RESPALDO/Code/Unity/2020.3.25f1/Unity.app/Contents/il2cpp/libil2cpp/vm-utils/NativeSymbol.cpp"
+#include "/Volumes/RESPALDO/Code/Unity/2020.3.25f1/Unity.app/Contents/il2cpp/libil2cpp/vm-utils/VmStringUtils.cpp"
+#include "/Volumes/RESPALDO/Code/Unity/2020.3.25f1/Unity.app/Contents/il2cpp/libil2cpp/vm-utils/icalls/mscorlib/System.Threading/Interlocked.cpp"
+#include "/Volumes/RESPALDO/Code/Unity/2020.3.25f1/Unity.app/Contents/il2cpp/libil2cpp/vm-utils/icalls/mscorlib/System/Math.cpp"
