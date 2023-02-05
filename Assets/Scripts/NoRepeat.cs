@@ -11,7 +11,7 @@ public class NoRepeat : MonoBehaviour
     {
         listener = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioListener>();
 
-        if(listener.enabled = true)
+        if(listener.enabled == true)
         {
             Console.Write("There is a Listener");
         } else
