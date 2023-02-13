@@ -16,9 +16,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 damageDirection;
 
     [Header("Stadistics")]
-    public float movementSpeed = 10;
-    public float jumpForce = 5;
-    public int vidas = 3;
+    public float movementSpeed = 5;
+    public float jumpForce = 10;
+    public int vidas;
     public float ImmortalTime;
 
     [Header("Collisions")]
@@ -43,6 +43,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip snow;
     [SerializeField] private AudioClip stone;
 
+    [Header("Hearts")]
+    public GameObject Heart1;
+    public GameObject Heart2;
+    public GameObject Heart3;
+    public GameObject Heart4;
+    public GameObject Heart5;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -63,6 +70,7 @@ public class PlayerController : MonoBehaviour
         if (vidas > 0)
             return;
 
+        Heart1.SetActive(false);
         this.enabled = false;
         SceneManager.LoadScene(2);
     }
@@ -83,6 +91,7 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(Immortalities());
             vidas--;
+            PositionHeart();
             gc.enabled = true;
             float AuxiliarSpeed = movementSpeed;
             this.damageDirection = damageDirection;
@@ -91,15 +100,6 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             Time.timeScale = 1;
             gc.enabled = false;
-
-            for (int i = GameManager.instance.vidasUI.transform.childCount - 1; i >= 0; i--)
-            {
-                if (GameManager.instance.vidasUI.transform.GetChild(i).gameObject.activeInHierarchy)
-                {
-                    GameManager.instance.vidasUI.transform.GetChild(i).gameObject.SetActive(false);
-                    break;
-                }
-            }
 
             movementSpeed = AuxiliarSpeed;
             Die();
@@ -148,12 +148,14 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        vidas = 3;
         audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        PositionHeart();
         Movement();
         Anchor();
         DontDestroyOnLoad(gameObject);
@@ -248,6 +250,52 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+    }
+
+    //Heart Position
+    public void PositionHeart()
+    {
+        
+        if(vidas == 5)
+        {
+            Heart1.SetActive(true);
+            Heart2.SetActive(true);
+            Heart3.SetActive(true);
+            Heart4.SetActive(true);
+            Heart5.SetActive(true);
+        }
+        else if(vidas == 4)
+        {
+            Heart1.SetActive(true);
+            Heart2.SetActive(true);
+            Heart3.SetActive(true);
+            Heart4.SetActive(true);
+            Heart5.SetActive(false);
+        }
+        else if(vidas == 3)
+        {
+            Heart1.SetActive(true);
+            Heart2.SetActive(true);
+            Heart3.SetActive(true);
+            Heart4.SetActive(false);
+            Heart5.SetActive(false);
+        }
+        else if(vidas == 2)
+        {
+            Heart1.SetActive(true);
+            Heart2.SetActive(true);
+            Heart3.SetActive(false);
+            Heart4.SetActive(false);
+            Heart5.SetActive(false);
+        }
+        else if(vidas == 1)
+        {
+            Heart1.SetActive(true);
+            Heart2.SetActive(false);
+            Heart3.SetActive(false);
+            Heart4.SetActive(false);
+            Heart5.SetActive(false);
+        }
     }
 
     //Sounds
