@@ -56,7 +56,6 @@ public class SceneDirector : MonoBehaviour
             coinsUI.SetActive(false);
             player.SetActive(false);
             gameManager.CoinCountRestart();
-            gameManager.LifeCountRestart();
         }
     }
 

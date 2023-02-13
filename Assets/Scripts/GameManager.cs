@@ -10,13 +10,6 @@ public class GameManager : MonoBehaviour
     public PlayerController player;
     public Item item;
     public GameObject pausePanel;
-    public GameObject vidasUI;
-
-    public GameObject Heart1;
-    public GameObject Heart2;
-    public GameObject Heart3;
-    public GameObject Heart4;
-    public GameObject Heart5;
 
     [Header("Coins Panel")]
     public int coins;
@@ -40,34 +33,6 @@ public class GameManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-//Show Heart Lives
-    public void ShowLifeOne()
-    {
-        Heart1.SetActive(true);
-    }
-
-    public void ShowLifeTwo()
-    {
-        Heart2.SetActive(true);
-    }
-
-    public void ShowLifeThree()
-    {
-        Heart3.SetActive(true);
-    }
-
-    public void ShowLifeFour()
-    {
-        Heart4.SetActive(true);
-    }
-
-     public void ShowLifeFive()
-    {
-        Heart5.SetActive(true);
-    }
-
-    //Finish Heart Showing
-
     public void UpdateCoinCounter()
     {
         coins++;
@@ -78,10 +43,9 @@ public class GameManager : MonoBehaviour
     {
         if(coins == 100)
         {
+            CoinCountRestart();
             audioSource.PlayOneShot(chimes);
-            item.PositionHeart();
             player.AddLife();
-            coins = 0;
         }
     }
 
@@ -115,13 +79,6 @@ public class GameManager : MonoBehaviour
     {
         coins = 0;
         textCoin.text = coins.ToString();
-    }
-
-    public void LifeCountRestart()
-    {
-        ShowLifeOne();
-        ShowLifeTwo();
-        ShowLifeThree();
     }
 
     public void QuitGame()
