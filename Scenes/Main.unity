@@ -3480,7 +3480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &423828619
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22630,7 +22630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1712023115
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22886,7 +22886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1776413229
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26155,8 +26155,28 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 7c543ebea20b646af905eba359458b4d, type: 3}
     - target: {fileID: 1435817796532550497, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
       propertyPath: vidas
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1435817796532550497, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: Heart1
+      value: 
+      objectReference: {fileID: 423828618}
+    - target: {fileID: 1435817796532550497, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: Heart2
+      value: 
+      objectReference: {fileID: 1776413228}
+    - target: {fileID: 1435817796532550497, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: Heart3
+      value: 
+      objectReference: {fileID: 1712023114}
+    - target: {fileID: 1435817796532550497, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: Heart4
+      value: 
+      objectReference: {fileID: 1224510262}
+    - target: {fileID: 1435817796532550497, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
+      propertyPath: Heart5
+      value: 
+      objectReference: {fileID: 1611368193}
     - target: {fileID: 1435817796532550497, guid: 0efd3b4f2ec1e4d33b6ca9861f51e981, type: 3}
       propertyPath: chimes
       value: 
