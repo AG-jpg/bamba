@@ -37,7 +37,7 @@ public class SceneDirector : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
 
-        if(scene.name == "Main")
+        if(scene.name == "Level1")
         {
             StartGame();
         }else if(scene.name == "Menu")

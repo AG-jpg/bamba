@@ -9,7 +9,7 @@ public class Inter : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene("Inter");
         }
     }
 }

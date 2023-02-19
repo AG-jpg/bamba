@@ -9,7 +9,7 @@ public class ToLevel3 : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene("Level4");
         }
     }
 }
