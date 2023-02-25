@@ -3,8 +3,8 @@
 
 ## Original Concept and Story
 
-**Aldo Guzman**
-[aldoguzman.design](https://www.example.com](https://aldoguzman.design)
+Aldo Guzman
+https://aldoguzman.design
 
 ## Art Credits
 
