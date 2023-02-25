@@ -1,6 +1,11 @@
 # Bamba's Adventure
 2D Platform Game in Unity
 
+## Original Concept and Story
+
+**Aldo Guzman**
+[aldoguzman.design](https://www.example.com](https://aldoguzman.design)
+
 ## Art Credits
 
 1. **Main Art Assets** - Kaleb Silva.
