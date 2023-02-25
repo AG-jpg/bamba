@@ -1,6 +1,12 @@
 # Bamba's Adventure
 2D Platform Game in Unity
 
+## Art Credits
+
+1. **Main Art Assets** - Kaleb Silva.
+2. **Other Art Assets** - User7030688, Pixeleart, Sararoom, Tio D.
+
+
 ## Music Credits
 
 1. **Main Menu** - *Falling Snow* - Aakash Gandhi.
@@ -12,6 +18,6 @@
 7. **Level 6** - *Invisible Beauty* - Aakash Gandhi.
 8. **Level 7** - *Ceremonial Library* - Asher Fulero.
 9. **Final Boss** - *Cafe Regrette* - Asher Fulero.
-10. 10 **Game Over** - *Earnest* - Kevin MacLeod.
+10. **Game Over** - *Earnest* - Kevin MacLeod.
 11. **Ending** - *Snow Butterflies* - Asher Fulero.
 12. **Credits** - *Frozen in Love* - Aakash Gandhi.
