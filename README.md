@@ -12,6 +12,6 @@
 7. **Level 6** - *Invisible Beauty* - Aakash Gandhi.
 8. **Level 7** - *Ceremonial Library* - Asher Fulero.
 9. **Final Boss** - *Cafe Regrette* - Asher Fulero.
-10 **Game Over** - *Earnest* - Kevin MacLeod.
+10. 10 **Game Over** - *Earnest* - Kevin MacLeod.
 11. **Ending** - *Snow Butterflies* - Asher Fulero.
 12. **Credits** - *Frozen in Love* - Aakash Gandhi.
