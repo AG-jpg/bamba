@@ -18,4 +18,12 @@ public void OnTriggerStay2D(Collider2D collision)
             player.movementSpeed = 15;
         }
     }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            player.movementSpeed = 5;
+        }
+    }
 }
