@@ -20,9 +20,7 @@ https://aldoguzman.design
 4. **Level 3** - *Waterfall* - Aakash Gandhi.
 5. **Level 4** - *Renunciation* -  Asher Fulero.
 6. **Level 5** - *Allégro* - Emmit Fenn.
-7. **Level 6** - *Invisible Beauty* - Aakash Gandhi.
-8. **Level 7** - *Ceremonial Library* - Asher Fulero.
-9. **Final Boss** - *Cafe Regrette* - Asher Fulero.
-10. **Game Over** - *Earnest* - Kevin MacLeod.
-11. **Ending** - *Snow Butterflies* - Asher Fulero.
-12. **Credits** - *Frozen in Love* - Aakash Gandhi.
+7. **Level 6** - *Snow Butterflies* - Asher Fulero.
+8. **Final Boss** - *Cafe Regrette* - Asher Fulero.
+9. **Game Over** - *Earnest* - Kevin MacLeod.
+10. **Credits** - *Frozen in Love* - Aakash Gandhi.
