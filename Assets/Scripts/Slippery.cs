@@ -15,7 +15,7 @@ public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            player.movementSpeed = 50;
+            player.movementSpeed = 15;
         }
     }
 }
