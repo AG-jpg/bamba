@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
         gc = Camera.main.GetComponent<GrayCamera>();
         sprite = GetComponent<SpriteRenderer>();
 
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -255,8 +255,8 @@ public class PlayerController : MonoBehaviour
     //Heart Position
     public void PositionHeart()
     {
-        
-        if(vidas == 5)
+
+        if (vidas == 5)
         {
             Heart1.SetActive(true);
             Heart2.SetActive(true);
@@ -264,7 +264,7 @@ public class PlayerController : MonoBehaviour
             Heart4.SetActive(true);
             Heart5.SetActive(true);
         }
-        else if(vidas == 4)
+        else if (vidas == 4)
         {
             Heart1.SetActive(true);
             Heart2.SetActive(true);
@@ -272,7 +272,7 @@ public class PlayerController : MonoBehaviour
             Heart4.SetActive(true);
             Heart5.SetActive(false);
         }
-        else if(vidas == 3)
+        else if (vidas == 3)
         {
             Heart1.SetActive(true);
             Heart2.SetActive(true);
@@ -280,7 +280,7 @@ public class PlayerController : MonoBehaviour
             Heart4.SetActive(false);
             Heart5.SetActive(false);
         }
-        else if(vidas == 2)
+        else if (vidas == 2)
         {
             Heart1.SetActive(true);
             Heart2.SetActive(true);
@@ -288,7 +288,7 @@ public class PlayerController : MonoBehaviour
             Heart4.SetActive(false);
             Heart5.SetActive(false);
         }
-        else if(vidas == 1)
+        else if (vidas == 1)
         {
             Heart1.SetActive(true);
             Heart2.SetActive(false);
@@ -305,7 +305,7 @@ public class PlayerController : MonoBehaviour
         {
             audioSource.PlayOneShot(coin);
         }
-         else if (collision.CompareTag("Life"))
+        else if (collision.CompareTag("Life"))
         {
             audioSource.PlayOneShot(chimes);
         }
