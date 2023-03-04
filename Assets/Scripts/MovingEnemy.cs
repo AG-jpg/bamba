@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovingEnemy : MonoBehaviour
 {
     //Sounds
-    [Header ("Audio")]
+    [Header("Audio")]
     private AudioSource audioSource;
     [SerializeField] private AudioClip slam;
 
@@ -18,15 +18,16 @@ public class MovingEnemy : MonoBehaviour
     public List<Transform> points = new List<Transform>();
     public bool waiting;
     public float waitingTime;
+    public float yAngle;
 
-    private void Awake() 
+    private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void FixedUpdate() 
+    private void FixedUpdate()
     {
         WaypointsMove();
     }
@@ -35,14 +36,25 @@ public class MovingEnemy : MonoBehaviour
     {
         direction = (points[IndexActual].position - transform.position).normalized;
 
-        if(!waiting)
+        //Cambiar Vista
+        if (direction.x < 0 && transform.localScale.x > 0)
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
+        else if (direction.x > 0 && transform.localScale.x < 0)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+
+        if (!waiting)
         {
             transform.position = (Vector2.MoveTowards(transform.position, points[IndexActual].position, movementVelocity * Time.deltaTime));
         }
 
-        if(Vector2.Distance(transform.position, points[IndexActual].position) <= 0.7f)
+        if (Vector2.Distance(transform.position, points[IndexActual].position) <= 0.7f)
         {
-            if(!waiting)
+
+            if (!waiting)
             {
                 StartCoroutine(Wait());
             }
@@ -51,18 +63,18 @@ public class MovingEnemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-         if(collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Platform"))
-         {
+        if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Platform"))
+        {
             player.transform.parent = transform;
-         }
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Platform"))
-         {
+        if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Platform"))
+        {
             player.transform.parent = null;
-         }
+        }
     }
 
     private IEnumerator Wait()
@@ -70,10 +82,10 @@ public class MovingEnemy : MonoBehaviour
         waiting = true;
         yield return new WaitForSeconds(waitingTime);
         waiting = false;
-        
+
         IndexActual++;
 
-        if(IndexActual >= points.Count)
+        if (IndexActual >= points.Count)
         {
             IndexActual = 0;
         }
@@ -81,7 +93,7 @@ public class MovingEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerController>().RecibirDano(-(collision.transform.position - transform.position).normalized);
             audioSource.PlayOneShot(slam);
