@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
+    public LivesUI livesUI;
     private Rigidbody2D rb;
     private Animator anim;
     public Vector2 direction;
@@ -43,13 +44,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip snow;
     [SerializeField] private AudioClip stone;
 
-    [Header("Hearts")]
-    public GameObject Heart1;
-    public GameObject Heart2;
-    public GameObject Heart3;
-    public GameObject Heart4;
-    public GameObject Heart5;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -70,7 +64,6 @@ public class PlayerController : MonoBehaviour
         if (vidas > 0)
             return;
 
-        Heart1.SetActive(false);
         this.enabled = false;
         SceneManager.LoadScene(2);
     }
@@ -91,7 +84,7 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(Immortalities());
             vidas--;
-            PositionHeart();
+            livesUI.PositionHeart();
             gc.enabled = true;
             float AuxiliarSpeed = movementSpeed;
             this.damageDirection = damageDirection;
@@ -155,7 +148,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PositionHeart();
+        livesUI.PositionHeart();
         Movement();
         Anchor();
         DontDestroyOnLoad(gameObject);
@@ -250,52 +243,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-    }
-
-    //Heart Position
-    public void PositionHeart()
-    {
-
-        if (vidas == 5)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(true);
-            Heart3.SetActive(true);
-            Heart4.SetActive(true);
-            Heart5.SetActive(true);
-        }
-        else if (vidas == 4)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(true);
-            Heart3.SetActive(true);
-            Heart4.SetActive(true);
-            Heart5.SetActive(false);
-        }
-        else if (vidas == 3)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(true);
-            Heart3.SetActive(true);
-            Heart4.SetActive(false);
-            Heart5.SetActive(false);
-        }
-        else if (vidas == 2)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(true);
-            Heart3.SetActive(false);
-            Heart4.SetActive(false);
-            Heart5.SetActive(false);
-        }
-        else if (vidas == 1)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(false);
-            Heart3.SetActive(false);
-            Heart4.SetActive(false);
-            Heart5.SetActive(false);
-        }
     }
 
     //Sounds
