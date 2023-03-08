@@ -6,17 +6,23 @@ public class Drop : MonoBehaviour
 {
     public GameObject Life;
     public Rigidbody2D rb;
-    public float Falling = 1;
+    private SpriteRenderer rend;
+    public int Falling = 1;
+
+    public int Order = 1;
+
+
     private void Awake()
     {
         rb = Life.GetComponent<Rigidbody2D>();
+        rend = Life.GetComponent<SpriteRenderer>();
     }
 
         private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Life"))
         {
-            Life.SetActive(true);
+            rend.sortingOrder = Order;
             rb.gravityScale = Falling;
         }
     }

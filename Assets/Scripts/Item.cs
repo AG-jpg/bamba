@@ -14,6 +14,10 @@ public class Item : MonoBehaviour
         {
             AssignItem();
         }
+        else if(gameObject.CompareTag("IceFloor"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void AssignItem()
@@ -21,7 +25,8 @@ public class Item : MonoBehaviour
         if(gameObject.CompareTag("Coin"))
         {
             GameManager.instance.UpdateCoinCounter();
-        }else if(gameObject.CompareTag("Life"))
+        }
+        else if(gameObject.CompareTag("Life"))
         {
             PlayerController.instance.AddLife();
         }
