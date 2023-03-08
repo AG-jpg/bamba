@@ -1861,6 +1861,7 @@ GameObject:
   - component: {fileID: 162175251}
   - component: {fileID: 162175250}
   - component: {fileID: 162175249}
+  - component: {fileID: 162175253}
   m_Layer: 6
   m_Name: Balloon
   m_TagString: Balloon
@@ -1940,7 +1941,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013438702, y: 0.4868183}
+  m_Offset: {x: 0.013438702, y: -0.0073308945}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1951,7 +1952,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4508705, y: 1.4107914}
+  m_Size: {x: 1.4508705, y: 2.3990898}
   m_EdgeRadius: 0
 --- !u!212 &162175252
 SpriteRenderer:
@@ -2005,6 +2006,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &162175253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162175247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d09d6aa683177461e97381809c23983b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Life: {fileID: 1766587598}
+  rb: {fileID: 1766587600}
+  Falling: 1
+  Order: 1
 --- !u!1 &187650904
 GameObject:
   m_ObjectHideFlags: 0
@@ -6747,6 +6764,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1624130387}
     m_Modifications:
+    - target: {fileID: 5170576047104743393, guid: ca075471ce9264204ba2cde9156d9c91, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170576047104743394, guid: ca075471ce9264204ba2cde9156d9c91, type: 3}
+      propertyPath: m_SortingOrder
+      value: -101
+      objectReference: {fileID: 0}
     - target: {fileID: 5170576047104743395, guid: ca075471ce9264204ba2cde9156d9c91, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6797,7 +6822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5170576047104743407, guid: ca075471ce9264204ba2cde9156d9c91, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca075471ce9264204ba2cde9156d9c91, type: 3}
@@ -12636,7 +12661,7 @@ GameObject:
   - component: {fileID: 978700643}
   m_Layer: 0
   m_Name: Ice Floor
-  m_TagString: Untagged
+  m_TagString: IceFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
