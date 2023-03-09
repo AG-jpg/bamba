@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class Drop : MonoBehaviour
 {
-    public GameObject Life;
+    [Header("Drops")]
+    public GameObject Balloon;
     public Rigidbody2D rb;
     private SpriteRenderer rend;
     public int Falling = 1;
-
     public int Order = 1;
 
 
     private void Awake()
     {
-        rb = Life.GetComponent<Rigidbody2D>();
-        rend = Life.GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+        rend = GetComponent<SpriteRenderer>();
     }
 
         private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Life"))
+        if(collision.CompareTag("Balloon"))
         {
             rend.sortingOrder = Order;
             rb.gravityScale = Falling;
