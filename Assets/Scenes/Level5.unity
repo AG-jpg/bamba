@@ -4106,7 +4106,7 @@ GameObject:
   - component: {fileID: 438131985}
   - component: {fileID: 438131988}
   m_Layer: 6
-  m_Name: Platform
+  m_Name: PlatformFalling
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4120,7 +4120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438131982}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.12, y: -10.32, z: 0}
+  m_LocalPosition: {x: -25, y: -10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4146,7 +4146,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &438131986
 BoxCollider2D:
@@ -4238,8 +4238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd92ec7417eb458c8ef058d5172f514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalpoint: {fileID: 1339413943}
   rb: {fileID: 438131985}
   Falling: 1
+  Stay: 0
 --- !u!61 &438131989
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5481,7 +5483,7 @@ GameObject:
   - component: {fileID: 629079759}
   m_Layer: 0
   m_Name: Limit (4)
-  m_TagString: Untagged
+  m_TagString: Limits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5513,7 +5515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121a70c5398e348e8980e3ac8f8ba201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpoint: {fileID: 1638571699}
+  checkpoint: {fileID: 1228573670}
   fall: {fileID: 8300000, guid: dc518de20779c4e01958cfbc95ae9e9e, type: 3}
 --- !u!82 &629079760
 AudioSource:
@@ -15909,6 +15911,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5170576047104743395, guid: ca075471ce9264204ba2cde9156d9c91, type: 3}
   m_PrefabInstance: {fileID: 1328971072}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1339413943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1339413944}
+  m_Layer: 0
+  m_Name: Orignal Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1339413944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339413943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25, y: -10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1878450446}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1348035513
 GameObject:
   m_ObjectHideFlags: 0
@@ -19890,6 +19923,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 438131983}
+  - {fileID: 1339413944}
   m_Father: {fileID: 2102026641}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
