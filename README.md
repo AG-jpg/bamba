@@ -9,7 +9,7 @@ https://aldoguzman.design
 ## Art Credits
 
 1. **Main Art Assets** - Kaleb Silva.
-2. **Other Art Assets** - User7030688, Pixeleart, Sararoom, Tio D.
+2. **Other Art Assets** - User7030688, Pixeleart, Sararoom, Tio D, cadmium_red.
 
 
 ## Music Credits
