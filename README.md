@@ -15,12 +15,13 @@ https://aldoguzman.design
 ## Music Credits
 
 1. **Main Menu** - *Falling Snow* - Aakash Gandhi.
-2. **Level 1** - *Falling Snow* - Aakash Gandhi.
-3. **Level 2** - *Allégro* - Emmit Fenn.
-4. **Level 3** - *Waterfall* - Aakash Gandhi.
-5. **Level 4** - *Renunciation* -  Asher Fulero.
-6. **Level 5** - *No.4 Piano Journey* - Esther Abrami.
-7. **Level 6** - *Swans in Flight* - Asher Fulero.
-8. **Final Boss** - *Cafe Regrette* - Asher Fulero.
-9. **Game Over** - *Earnest* - Kevin MacLeod.
-10. **Credits** - *Frozen in Love* - Aakash Gandhi.
+2. **Animation Intro** - *Ceremonial Library* - Asher Fulero.
+3. **Level 1** - *Falling Snow* - Aakash Gandhi.
+4. **Level 2** - *Allégro* - Emmit Fenn.
+5. **Level 3** - *Waterfall* - Aakash Gandhi.
+6. **Level 4** - *Renunciation* -  Asher Fulero.
+7. **Level 5** - *No.4 Piano Journey* - Esther Abrami.
+8. **Level 6** - *Swans in Flight* - Asher Fulero.
+9. **Final Boss** - *Cafe Regrette* - Asher Fulero.
+10. **Game Over** - *Earnest* - Kevin MacLeod.
+11. **Credits** - *Frozen in Love* - Aakash Gandhi.
