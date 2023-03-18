@@ -9451,7 +9451,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: To Mineral Cliffs
+  m_Text: To Mountain Cliffs
 --- !u!222 &461607812
 CanvasRenderer:
   m_ObjectHideFlags: 0
