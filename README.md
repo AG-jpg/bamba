@@ -3,6 +3,9 @@
 
 ## Original Concept and Story
 
+Aldo Guzman
+https://aldoguzman.design
+
 ## Levels
 1. *Loggers Village*
 2. *Ice Cave*
@@ -12,10 +15,6 @@
 6. *Frozen Lake*
 7. *Iceberg Beach*
 8. *Yeti Forest*
-
-
-Aldo Guzman
-https://aldoguzman.design
 
 ## Art Credits
 
