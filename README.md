@@ -3,6 +3,17 @@
 
 ## Original Concept and Story
 
+## Levels
+1. *Loggers Village*
+2. *Ice Cave*
+3. *Karly Falls*
+4. *Mountain Cliffs* - *Mushroom Village*
+5. *Mineral Cave*
+6. *Frozen Lake*
+7. *Iceberg Beach*
+8. *Yeti Forest*
+
+
 Aldo Guzman
 https://aldoguzman.design
 
