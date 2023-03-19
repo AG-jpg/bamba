@@ -14203,8 +14203,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slam: {fileID: 0}
-  movementVelocity: 0
-  points: []
+  movementVelocity: 5
+  points:
+  - {fileID: 499097885}
+  - {fileID: 1354514691}
+  - {fileID: 1085849862}
+  - {fileID: 1236431797}
   waiting: 0
   waitingTime: 0
   yAngle: 0
