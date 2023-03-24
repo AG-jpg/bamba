@@ -12,6 +12,11 @@ public class LivesUI : MonoBehaviour
     public GameObject Heart3;
     public GameObject Heart4;
     public GameObject Heart5;
+    public GameObject Heart6;
+    public GameObject Heart7;
+    public GameObject Heart8;
+    public GameObject Heart9;
+    public GameObject Heart10;
 
     public void Awake()
     {
@@ -21,14 +26,83 @@ public class LivesUI : MonoBehaviour
  //Heart Position
     public void PositionHeart()
     {
-
-        if (player.vidas == 5)
+        if (player.vidas == 10)
         {
             Heart1.SetActive(true);
             Heart2.SetActive(true);
             Heart3.SetActive(true);
             Heart4.SetActive(true);
             Heart5.SetActive(true);
+            Heart6.SetActive(true);
+            Heart7.SetActive(true);
+            Heart8.SetActive(true);
+            Heart9.SetActive(true);
+            Heart10.SetActive(true);
+        }
+        else if (player.vidas == 9)
+        {
+            Heart1.SetActive(true);
+            Heart2.SetActive(true);
+            Heart3.SetActive(true);
+            Heart4.SetActive(true);
+            Heart5.SetActive(true);
+            Heart6.SetActive(true);
+            Heart7.SetActive(true);
+            Heart8.SetActive(true);
+            Heart9.SetActive(true);
+            Heart10.SetActive(false);
+        }
+        else if (player.vidas == 8)
+        {
+            Heart1.SetActive(true);
+            Heart2.SetActive(true);
+            Heart3.SetActive(true);
+            Heart4.SetActive(true);
+            Heart5.SetActive(true);
+            Heart6.SetActive(true);
+            Heart7.SetActive(true);
+            Heart8.SetActive(true);
+            Heart9.SetActive(false);
+            Heart10.SetActive(false);
+        }
+        else if (player.vidas == 7)
+        {
+            Heart1.SetActive(true);
+            Heart2.SetActive(true);
+            Heart3.SetActive(true);
+            Heart4.SetActive(true);
+            Heart5.SetActive(true);
+            Heart6.SetActive(true);
+            Heart7.SetActive(true);
+            Heart8.SetActive(false);
+            Heart9.SetActive(false);
+            Heart10.SetActive(false);
+        }
+        else if (player.vidas == 6)
+        {
+            Heart1.SetActive(true);
+            Heart2.SetActive(true);
+            Heart3.SetActive(true);
+            Heart4.SetActive(true);
+            Heart5.SetActive(true);
+            Heart6.SetActive(true);
+            Heart7.SetActive(false);
+            Heart8.SetActive(false);
+            Heart9.SetActive(false);
+            Heart10.SetActive(false);
+        }
+        else if (player.vidas == 5)
+        {
+            Heart1.SetActive(true);
+            Heart2.SetActive(true);
+            Heart3.SetActive(true);
+            Heart4.SetActive(true);
+            Heart5.SetActive(true);
+            Heart6.SetActive(false);
+            Heart7.SetActive(false);
+            Heart8.SetActive(false);
+            Heart9.SetActive(false);
+            Heart10.SetActive(false);
         }
         else if (player.vidas == 4)
         {
@@ -37,6 +111,11 @@ public class LivesUI : MonoBehaviour
             Heart3.SetActive(true);
             Heart4.SetActive(true);
             Heart5.SetActive(false);
+            Heart6.SetActive(false);
+            Heart7.SetActive(false);
+            Heart8.SetActive(false);
+            Heart9.SetActive(false);
+            Heart10.SetActive(false);
         }
         else if (player.vidas == 3)
         {
@@ -45,6 +124,11 @@ public class LivesUI : MonoBehaviour
             Heart3.SetActive(true);
             Heart4.SetActive(false);
             Heart5.SetActive(false);
+            Heart6.SetActive(false);
+            Heart7.SetActive(false);
+            Heart8.SetActive(false);
+            Heart9.SetActive(false);
+            Heart10.SetActive(false);
         }
         else if (player.vidas == 2)
         {
@@ -53,6 +137,11 @@ public class LivesUI : MonoBehaviour
             Heart3.SetActive(false);
             Heart4.SetActive(false);
             Heart5.SetActive(false);
+            Heart6.SetActive(false);
+            Heart7.SetActive(false);
+            Heart8.SetActive(false);
+            Heart9.SetActive(false);
+            Heart10.SetActive(false);
         }
         else if (player.vidas == 1)
         {
@@ -61,6 +150,11 @@ public class LivesUI : MonoBehaviour
             Heart3.SetActive(false);
             Heart4.SetActive(false);
             Heart5.SetActive(false);
+            Heart6.SetActive(false);
+            Heart7.SetActive(false);
+            Heart8.SetActive(false);
+            Heart9.SetActive(false);
+            Heart10.SetActive(false);
         }
         else if (player.vidas == 0)
         {
@@ -69,6 +163,11 @@ public class LivesUI : MonoBehaviour
             Heart3.SetActive(false);
             Heart4.SetActive(false);
             Heart5.SetActive(false);
+            Heart6.SetActive(false);
+            Heart7.SetActive(false);
+            Heart8.SetActive(false);
+            Heart9.SetActive(false);
+            Heart10.SetActive(false);
         }
     }
 }
