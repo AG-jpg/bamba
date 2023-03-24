@@ -24863,7 +24863,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1850716193}
   - component: {fileID: 1850716192}
-  - component: {fileID: 1850716195}
   - component: {fileID: 1850716194}
   m_Layer: 0
   m_Name: LivesUI
@@ -24890,6 +24889,11 @@ MonoBehaviour:
   Heart3: {fileID: 1712023114}
   Heart4: {fileID: 1224510262}
   Heart5: {fileID: 1611368193}
+  Heart6: {fileID: 178101164}
+  Heart7: {fileID: 1762514559}
+  Heart8: {fileID: 2033006953}
+  Heart9: {fileID: 253421071}
+  Heart10: {fileID: 715729745}
 --- !u!4 &1850716193
 Transform:
   m_ObjectHideFlags: 0
@@ -25001,18 +25005,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1850716195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850716191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32c734f11962a44c492bb3e424250cd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1852437341
 GameObject:
   m_ObjectHideFlags: 0
