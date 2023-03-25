@@ -13,6 +13,11 @@ TagManager:
   - Snowman
   - Stone
   - Golem
+  - GameManager
+  - Life
+  - IceFloor
+  - Balloon
+  - Limits
   layers:
   - Default
   - TransparentFX
