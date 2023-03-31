@@ -32,6 +32,7 @@ https://aldoguzman.design
 6. **Level 4** - *Renunciation* -  Asher Fulero.
 7. **Level 5** - *No.4 Piano Journey* - Esther Abrami.
 8. **Level 6** - *Swans in Flight* - Asher Fulero.
-9. **Final Boss** - *Cafe Regrette* - Asher Fulero.
-10. **Game Over** - *Earnest* - Kevin MacLeod.
-11. **Credits** - *Frozen in Love* - Aakash Gandhi.
+9. **Level 7** - *No.2 Remembering Her* - Esther Abrami.
+10. **Final Boss** - *Cafe Regrette* - Asher Fulero.
+11. **Game Over** - *Earnest* - Kevin MacLeod.
+12. **Credits** - *Frozen in Love* - Aakash Gandhi.
