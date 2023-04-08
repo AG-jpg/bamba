@@ -4,7 +4,7 @@
 Aldo Guzman \
 [www.aldoguzman.design](https://aldoguzman.design)
 
-Created on **[Unity]**(https://unity.com)
+Created using **Unity**
 
 ---
 ### Info Facts
