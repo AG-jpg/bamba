@@ -6,6 +6,6 @@ Aldo Guzman \
 
 ---
 ### Info Facts
-All facts and info on wildlife were taken from **WWF** website [www.worldwildlife.org](https://www.worldwildlife.org/) \
+All facts and info on wildlife were taken from **WWF** website [www.worldwildlife.org](https://www.worldwildlife.org/)
 
 
