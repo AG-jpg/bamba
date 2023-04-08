@@ -10,3 +10,11 @@ Space bar to jump.  Enter to pause the game. Talk to the habitants to get reward
 ## Level 1 NPC:
 
 **Polar bears** are threaten by *habitat fragmentation* due to climate change and the expansion of Oil Companies operating in the Arctic.
+
+## Level 2 NPC:
+
+**Snowy Owls** are listed as "Vulnerable" species, as climate change leads to habitat loss and a decrease in prey to feed from.
+
+## Level 3 NPC:
+
+Microplastics have been found in the digestive systems of birds that feed on fish. Causing them a mortal disease called **Plasticosis**.
