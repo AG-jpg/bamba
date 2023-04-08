@@ -1,5 +1,6 @@
 ## Bamba's Adventure
 
 ### Original Idea
+---
 Aldo Guzman
-[Website](https://aldoguzman.design)
+[www.aldoguzman.design](https://aldoguzman.design)
