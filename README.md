@@ -8,6 +8,9 @@ Created using **Unity**
 
 ---
 ### Info Facts
-All facts and info on wildlife were taken from **WWF** website [www.worldwildlife.org](https://www.worldwildlife.org/)
+All facts and info on wildlife were taken from academic sources and activists:
+
+- **WWF** [www.worldwildlife.org](https://www.worldwildlife.org/)
+- **Smithsonian** [www.smithsonianmag.com](https://www.smithsonianmag.com)
 
 
