@@ -1,5 +1,5 @@
 ## Bamba's Adventure
 
-## H2 Original Idea
+### Original Idea
 Aldo Guzman
 [Website](https://aldoguzman.design)
