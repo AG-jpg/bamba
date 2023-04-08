@@ -6,3 +6,7 @@ Welcome to the snowy lands.
 
 Use Right - Left arrows to move.
 Space bar to jump.  Enter to pause the game. Talk to the habitants to get rewards.
+
+## Level 1 NPC:
+
+**Polar bears** are threaten by *habitat fragmentation* due to climate change and the expansion of Oil Companies operating in the Arctic.
