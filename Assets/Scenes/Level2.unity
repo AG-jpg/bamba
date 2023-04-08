@@ -10033,7 +10033,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41, y: 0.46299744}
+  m_AnchoredPosition: {x: -41, y: 0}
   m_SizeDelta: {x: 380, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1197684488
@@ -10057,8 +10057,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6e491f10a730e4d0e96f2091321727a2, type: 3}
-    m_FontSize: 22
+    m_Font: {fileID: 12800000, guid: 37268a78ecdb4401b9c5ecac869771fd, type: 3}
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -15671,12 +15671,12 @@ GameObject:
   - component: {fileID: 1939670394}
   - component: {fileID: 1939670393}
   m_Layer: 5
-  m_Name: Dialogue (1)
+  m_Name: Sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1939670392
 RectTransform:
   m_ObjectHideFlags: 0
