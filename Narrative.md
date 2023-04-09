@@ -18,3 +18,7 @@ Space bar to jump.  Enter to pause the game. Talk to the habitants to get reward
 ## Level 3 NPC:
 
 Microplastics have been found in the digestive systems of birds that feed on fish. Causing them a mortal disease called **Plasticosis**.
+
+## Level 4 NPC:
+
+65 species of fungi are listed as endangered. **Fungi** are crucial for the carbon cycle by decomposing organic matter, yet, our endangerment it's not commonly known acknowledge.
