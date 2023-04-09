@@ -25,3 +25,6 @@ Microplastics have been found in the digestive systems of birds that feed on fis
 
 ## Level 5 NPC:
 Mining tailings are the materials left behind in mining activity. These materials are often radioactive, toxic or acidic, polluting the land.
+
+## Level 6 NPC:
+Commercial fishing forces many penguin species to compete for the fish. The practice also leads to accidental capture and drowning in fishing nets.
