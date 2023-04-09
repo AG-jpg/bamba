@@ -21,4 +21,7 @@ Microplastics have been found in the digestive systems of birds that feed on fis
 
 ## Level 4 NPC:
 
-65 species of fungi are listed as endangered. **Fungi** are crucial for the carbon cycle by decomposing organic matter, yet, our endangerment it's not commonly known acknowledge.
+65 species of fungi are listed as endangered. **Fungi** are crucial for the carbon cycle by decomposing organic matter.
+
+## Level 5 NPC:
+Mining tailings are the materials left behind in mining activity. These materials are often radioactive, toxic or acidic, polluting the land.
