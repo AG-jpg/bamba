@@ -28,3 +28,6 @@ Mining tailings are the materials left behind in mining activity. These material
 
 ## Level 6 NPC:
 Commercial fishing forces many penguin species to compete for the fish. The practice also leads to accidental capture and drowning in fishing nets.
+
+## Level 7 NPC:
+Rapid ice loss in the Arctic causes seal pups to be prematurely separated from their mothers. This and the inability to build dens for protection leads to high pup mortality.
