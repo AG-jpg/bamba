@@ -15,10 +15,6 @@ public class GameManager : MonoBehaviour
     public int coins;
     public Text textCoin;
 
-    [Header("Audio")]
-    private AudioSource audioSource;
-    [SerializeField] private AudioClip chimes;
-
      private void Awake() 
     {
 
@@ -29,8 +25,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        audioSource = GetComponent<AudioSource>();
     }
 
     public void UpdateCoinCounter()
@@ -44,7 +38,6 @@ public class GameManager : MonoBehaviour
         if(coins == 100)
         {
             CoinCountRestart();
-            audioSource.PlayOneShot(chimes);
             player.AddLife();
         }
     }

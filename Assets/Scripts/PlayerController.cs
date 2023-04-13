@@ -102,6 +102,7 @@ public class PlayerController : MonoBehaviour
     public void AddLife()
     {
         vidas++;
+        audioSource.PlayOneShot(chimes);
     }
 
     private void FixedUpdate()
@@ -251,10 +252,6 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Coin"))
         {
             audioSource.PlayOneShot(coin);
-        }
-        else if (collision.CompareTag("Life"))
-        {
-            audioSource.PlayOneShot(chimes);
         }
         else if (collision.CompareTag("Snowball"))
         {
