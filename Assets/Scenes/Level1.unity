@@ -4689,7 +4689,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 620644294}
   ziman: {fileID: 1189096084}
-  player: {fileID: 1753299946}
 --- !u!61 &511317488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4776,7 +4775,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511317486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.87, y: -1.24, z: 0}
+  m_LocalPosition: {x: 11.87, y: -1.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7864,7 +7863,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1449910026}
   ziman: {fileID: 0}
-  player: {fileID: 0}
 --- !u!1001 &835091289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14298,7 +14296,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1836292724}
   ziman: {fileID: 0}
-  player: {fileID: 0}
 --- !u!4 &1145231038
 Transform:
   m_ObjectHideFlags: 0
