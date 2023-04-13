@@ -6,14 +6,14 @@ public class Dialogue : MonoBehaviour
 {
     public GameObject dialogueBox;
     public GameObject ziman;
-
-    public PlayerController player;
-
+    private PlayerController player;
     private BoxCollider2D bc;
 
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         bc = GetComponent<BoxCollider2D>();
+        ziman.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
