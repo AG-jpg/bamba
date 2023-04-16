@@ -26292,7 +26292,7 @@ GameObject:
   - component: {fileID: 2081330418}
   - component: {fileID: 2081330419}
   - component: {fileID: 2081330421}
-  - component: {fileID: 2081330420}
+  - component: {fileID: 2081330422}
   m_Layer: 0
   m_Name: mushy (1)
   m_TagString: Untagged
@@ -26367,19 +26367,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2081330420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081330417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1856afe762ea24b13af0aa9021857906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 683244429}
 --- !u!61 &2081330421
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26406,6 +26393,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.000426, y: 0.96177906}
   m_EdgeRadius: 0
+--- !u!114 &2081330422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081330417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27313ebef9e2349c0b251357b09b5016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 683244429}
+  ziman: {fileID: 1147753535}
 --- !u!1 &2082848250
 GameObject:
   m_ObjectHideFlags: 0
