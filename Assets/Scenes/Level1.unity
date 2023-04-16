@@ -4667,7 +4667,7 @@ GameObject:
   - component: {fileID: 511317490}
   - component: {fileID: 511317489}
   - component: {fileID: 511317488}
-  - component: {fileID: 511317487}
+  - component: {fileID: 511317491}
   m_Layer: 0
   m_Name: polar bear
   m_TagString: Untagged
@@ -4675,20 +4675,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &511317487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 511317486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1856afe762ea24b13af0aa9021857906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 620644294}
-  ziman: {fileID: 1189096084}
 --- !u!61 &511317488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4782,6 +4768,20 @@ Transform:
   m_Father: {fileID: 1930528753}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &511317491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511317486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27313ebef9e2349c0b251357b09b5016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 620644294}
+  ziman: {fileID: 1189096084}
 --- !u!4 &514623965 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1263724777599564720, guid: d141715a301d943bcbfe046c9e8e3f5e, type: 3}
@@ -5963,7 +5963,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f2c996445286b4eddaf1af1f9e5594d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c24313f71183c4eabbbe5b25f3a752bd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7862,7 +7862,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1449910026}
-  ziman: {fileID: 0}
 --- !u!1001 &835091289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14295,7 +14294,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1836292724}
-  ziman: {fileID: 0}
 --- !u!4 &1145231038
 Transform:
   m_ObjectHideFlags: 0
