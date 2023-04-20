@@ -10,7 +10,7 @@ Created using **Unity**
 ### Music
 - Menu: *Falling Snow* - Aakash Gandhi.
 - Level 1: *Falling Snow* - Aakash Gandhi.
-- Level 2: *Allégro* - Emmit Fenn.
+- Level 2: *Laendler in C Minor Hess 68* - Kevin MacLeod.
 - Level 3: *Waterfall* - Aakash Gandhi.
 - Level 4: *Renunciation* - Asher Fulero.
 - Level 5: *No.4 Piano Journey* - Esther Abrami.
