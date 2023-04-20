@@ -28,3 +28,11 @@ All info on wildlife, climate change and plastic pollution was taken from academ
 - **Journal of Hazardous Material** [www.sciencedirect.com](https://www.sciencedirect.com)
 - **Smithsonian** [www.smithsonianmag.com](https://www.smithsonianmag.com)
 - **WWF** [www.worldwildlife.org](https://www.worldwildlife.org/)
+
+---
+### Atributions
+Laendler in C Minor Hess 68 de Kevin MacLeod tiene una licencia Atribución 4.0 de Creative Commons. https://creativecommons.org/licenses/by/4.0/
+
+Fuente: http://incompetech.com/music/royalty-free/?keywords=laendler&Search=Search
+
+Artista: http://incompetech.com/
