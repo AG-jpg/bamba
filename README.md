@@ -6,6 +6,14 @@ A video game inspired by classic side–scrolling platform RPG games. Heavily in
 
 Deep in the mountains, you‘ll find the Snowy Lands. A place full of trees, mountains, rivers, waterfalls, caves, and fantasy creatures living in small towns. From the Main Land to the Mushroom  Village, the Karly Falls and the Iceberg Sea, Bamba, the adventurous explorer dog will travel far and wide this wild land to discover its secrets and treasures.
 
+###About Bamba
+
+Bamba’s Adventure it’s not only my first attempt on developing a full concept videogame, but also a tribute to my dog: Bamba.
+
+She is a Canaanite dog. Rescued from a Bediun village in the south of Israel, and adopted by us when she was 2 months old.
+
+Her name was given because of her colors, similar to a “goldish-brown” peanut snack famous in Israel. But it’s also the name of a Mexican song, originally from the state I was born in, and made famous by 50’s musician Ritchie Valens. So in a way, Bamba carries in her name a fusion of my two home countries.
+
 ---
 ### Gameplay
 
@@ -21,6 +29,7 @@ Aldo Guzman \
 ###Technical Aspects
 
 Bamba’s Adventure is fully developed in Unity. Coded in C# on Visual Studio Code. Arts were purchased from talented artist Kaleb Silva and managed in Adobe Illustrator and Photoshop. Sound effects were downloaded from various free libraries, and piano music from Youtube’s Audio Library.
+
 
 ---
 ### Music
