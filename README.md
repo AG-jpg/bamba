@@ -6,7 +6,7 @@ A video game inspired by classic side–scrolling platform RPG games. Heavily in
 
 Deep in the mountains, you‘ll find the Snowy Lands. A place full of trees, mountains, rivers, waterfalls, caves, and fantasy creatures living in small towns. From the Main Land to the Mushroom  Village, the Karly Falls and the Iceberg Sea, Bamba, the adventurous explorer dog will travel far and wide this wild land to discover its secrets and treasures.
 
-###About Bamba
+### About Bamba
 
 Bamba’s Adventure it’s not only my first attempt on developing a full concept videogame, but also a tribute to my dog: Bamba.
 
