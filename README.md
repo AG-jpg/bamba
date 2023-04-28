@@ -7,6 +7,12 @@ A video game inspired by classic side–scrolling platform RPG games. Heavily in
 Deep in the mountains, you‘ll find the Snowy Lands. A place full of trees, mountains, rivers, waterfalls, caves, and fantasy creatures living in small towns. From the Main Land to the Mushroom  Village, the Karly Falls and the Iceberg Sea, Bamba, the adventurous explorer dog will travel far and wide this wild land to discover its secrets and treasures.
 
 
+### Gameplay
+
+As any side–scrolling platform RPG, the basics are to move left and right, jump, step on enemies, grab coins and objects that give you extra life.
+ Every level adds different kinds of enemies. Some may throw things at Bamba, some may chase her, some may attack her by surprise from above the sky, or from below the water. More than a lineal story, the game is focused on exploration.
+
+
 ### Original Idea
 Aldo Guzman \
 [www.aldoguzman.design](https://aldoguzman.design)
