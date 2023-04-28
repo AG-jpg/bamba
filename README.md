@@ -25,8 +25,12 @@ As any side–scrolling platform RPG, the basics are to move left and right, jum
 Aldo Guzman \
 [www.aldoguzman.design](https://aldoguzman.design)
 
+I’m a UX/UI and Web Designer from Mexico, currently living in Israel. I don’t consider myself a Developer, but I code on Javascript for React websites and C# for Unity.
+ 
+I enjoy reading about startups & tech, traveling, taking photos, riding my bike, and roaming the streets alongside with Bamba. I also enjoy playing RPG video games, watching sci-fi movies, and listening to sad but pretty, dreamy rock songs.
 
-###Technical Aspects
+
+### Technical Aspects
 
 Bamba’s Adventure is fully developed in Unity. Coded in C# on Visual Studio Code. Arts were purchased from talented artist Kaleb Silva and managed in Adobe Illustrator and Photoshop. Sound effects were downloaded from various free libraries, and piano music from Youtube’s Audio Library.
 
