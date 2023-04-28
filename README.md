@@ -1,8 +1,6 @@
 ## Bamba's Adventure
 
-A video game inspired by classic side–scrolling platform RPG games. Heavily influenced by games like Adventure Island, Super Mario World, and Celeste, but also by some ideas from Rise of The Tomb Rider. This game seeks to bring the retro nostalgia of a SNES and Arcade era for modern gamers. With a beautiful, nostalgic, piano music setting the atmosphere for each level.
- 
-It’s also a tribute to my dog Bamba, and my first attempt on developing a full concept videogame.
+A video game inspired by classic side–scrolling platform RPG games. Heavily influenced by games like Adventure Island and Super Mario World, but also by some ideas from Tomb Rider Saga Reboot. This game seeks to bring the retro nostalgia of a SNES and Arcade era for modern gamers. With a beautiful, nostalgic, piano music setting the atmosphere for each level. NPCs shares actual facts about how human activity is affecting the artic's biodiversity in an attempt to create awareness on climate change and residual waste. It’s also a tribute to my dog Bamba, and my first attempt at developing a full concept videogame.
 
 ### Original Idea
 Aldo Guzman \
@@ -26,7 +24,7 @@ Created using **Unity**
 
 ---
 ### Info Facts
-All info on wildlife, climate change and plastic pollution was taken from academic sources:
+All info on wildlife, climate change and residual waste was taken from academic sources:
 
 - **Earth.org** [www.earth.org](https://earth.org)
 - **Journal of Hazardous Material** [www.sciencedirect.com](https://www.sciencedirect.com)
