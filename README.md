@@ -1,5 +1,9 @@
 ## Bamba's Adventure
 
+A video game inspired by classic side–scrolling platform RPG games. Heavily influenced by games like Adventure Island, Super Mario World, and Celeste, but also by some ideas from Rise of The Tomb Rider. This game seeks to bring the retro nostalgia of a SNES and Arcade era for modern gamers. With a beautiful, nostalgic, piano music setting the atmosphere for each level.
+ 
+It’s also a tribute to my dog Bamba, and my first attempt on developing a full concept videogame.
+
 ### Original Idea
 Aldo Guzman \
 [www.aldoguzman.design](https://aldoguzman.design)
