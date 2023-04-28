@@ -2,22 +2,26 @@
 
 A video game inspired by classic side–scrolling platform RPG games. Heavily influenced by games like Adventure Island and Super Mario World, but also by some ideas from Tomb Rider Saga Reboot. This game seeks to bring the retro nostalgia of a SNES and Arcade era for modern gamers. With a beautiful, nostalgic, piano music setting the atmosphere for each level. NPCs shares actual facts about how human activity is affecting the artic's biodiversity in an attempt to create awareness on climate change and residual waste. It’s also a tribute to my dog Bamba, and my first attempt at developing a full concept videogame.
 
+---
 ### Welcome to the Snowy Lands
 
 Deep in the mountains, you‘ll find the Snowy Lands. A place full of trees, mountains, rivers, waterfalls, caves, and fantasy creatures living in small towns. From the Main Land to the Mushroom  Village, the Karly Falls and the Iceberg Sea, Bamba, the adventurous explorer dog will travel far and wide this wild land to discover its secrets and treasures.
 
-
+---
 ### Gameplay
 
 As any side–scrolling platform RPG, the basics are to move left and right, jump, step on enemies, grab coins and objects that give you extra life.
  Every level adds different kinds of enemies. Some may throw things at Bamba, some may chase her, some may attack her by surprise from above the sky, or from below the water. More than a lineal story, the game is focused on exploration.
 
-
+---
 ### Original Idea
 Aldo Guzman \
 [www.aldoguzman.design](https://aldoguzman.design)
 
-Created using **Unity**
+
+###Technical Aspects
+
+Bamba’s Adventure is fully developed in Unity. Coded in C# on Visual Studio Code. Arts were purchased from talented artist Kaleb Silva and managed in Adobe Illustrator and Photoshop. Sound effects were downloaded from various free libraries, and piano music from Youtube’s Audio Library.
 
 ---
 ### Music
