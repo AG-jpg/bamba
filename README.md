@@ -63,5 +63,4 @@ All info on wildlife, climate change and residual waste was taken from academic 
 Laendler in C Minor Hess 68 de Kevin MacLeod tiene una licencia Atribución 4.0 de Creative Commons. https://creativecommons.org/licenses/by/4.0/
 
 Fuente: http://incompetech.com/music/royalty-free/?keywords=laendler&Search=Search
-
 Artista: http://incompetech.com/
