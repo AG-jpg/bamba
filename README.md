@@ -23,7 +23,7 @@ As any side–scrolling platform RPG, the basics are to move left and right, jum
 ---
 ### Original Idea
 Aldo Guzman \
-[www.aldoguzman.design](https://aldoguzman.design)
+[www.aldoguzman.design](https://aldoguzman.design) \
 [www.playbamba.online](https://playbamba.online)
 
 I’m a UX/UI and Web Designer from Mexico, currently living in Israel. I don’t consider myself a Developer, but I code on Javascript for React websites and C# for Unity.
