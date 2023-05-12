@@ -249,25 +249,28 @@ public class PlayerController : MonoBehaviour
     //Sounds
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Coin"))
-        {
-            audioSource.PlayOneShot(coin);
-        }
-        else if (collision.CompareTag("Snowball"))
-        {
-            audioSource.PlayOneShot(snow);
-        }
-        else if (collision.CompareTag("Stone"))
-        {
-            audioSource.PlayOneShot(stone);
-        }
-        else if (collision.CompareTag("Snowman"))
-        {
-            audioSource.PlayOneShot(slam);
-        }
-        else if (collision.CompareTag("Golem"))
-        {
-            audioSource.PlayOneShot(slam);
-        }
+        switch (collision.tag)
+    {
+        case "Coin":
+        audioSource.PlayOneShot(coin);
+        break;
+
+        case "Snowball":
+        audioSource.PlayOneShot(snow);
+        break;
+
+        case "Stone":
+        audioSource.PlayOneShot(stone);
+        break;
+
+        case "Snowman":
+        audioSource.PlayOneShot(slam);
+        break;
+
+        case "Golem":
+        audioSource.PlayOneShot(slam);
+        break;
+    }
+
     }
 }
