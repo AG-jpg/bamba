@@ -250,7 +250,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.tag)
-    {
+     {
         case "Coin":
         audioSource.PlayOneShot(coin);
         break;
@@ -270,7 +270,6 @@ public class PlayerController : MonoBehaviour
         case "Golem":
         audioSource.PlayOneShot(slam);
         break;
-    }
-
+     }
     }
 }

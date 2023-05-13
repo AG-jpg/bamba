@@ -23,151 +23,153 @@ public class LivesUI : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
- //Heart Position
+    //Heart Position
     public void PositionHeart()
     {
-        if (player.vidas == 10)
+        switch (player.vidas)
         {
-            Heart1.SetActive(true);
-            Heart2.SetActive(true);
-            Heart3.SetActive(true);
-            Heart4.SetActive(true);
-            Heart5.SetActive(true);
-            Heart6.SetActive(true);
-            Heart7.SetActive(true);
-            Heart8.SetActive(true);
-            Heart9.SetActive(true);
-            Heart10.SetActive(true);
-        }
-        else if (player.vidas == 9)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(true);
-            Heart3.SetActive(true);
-            Heart4.SetActive(true);
-            Heart5.SetActive(true);
-            Heart6.SetActive(true);
-            Heart7.SetActive(true);
-            Heart8.SetActive(true);
-            Heart9.SetActive(true);
-            Heart10.SetActive(false);
-        }
-        else if (player.vidas == 8)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(true);
-            Heart3.SetActive(true);
-            Heart4.SetActive(true);
-            Heart5.SetActive(true);
-            Heart6.SetActive(true);
-            Heart7.SetActive(true);
-            Heart8.SetActive(true);
-            Heart9.SetActive(false);
-            Heart10.SetActive(false);
-        }
-        else if (player.vidas == 7)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(true);
-            Heart3.SetActive(true);
-            Heart4.SetActive(true);
-            Heart5.SetActive(true);
-            Heart6.SetActive(true);
-            Heart7.SetActive(true);
-            Heart8.SetActive(false);
-            Heart9.SetActive(false);
-            Heart10.SetActive(false);
-        }
-        else if (player.vidas == 6)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(true);
-            Heart3.SetActive(true);
-            Heart4.SetActive(true);
-            Heart5.SetActive(true);
-            Heart6.SetActive(true);
-            Heart7.SetActive(false);
-            Heart8.SetActive(false);
-            Heart9.SetActive(false);
-            Heart10.SetActive(false);
-        }
-        else if (player.vidas == 5)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(true);
-            Heart3.SetActive(true);
-            Heart4.SetActive(true);
-            Heart5.SetActive(true);
-            Heart6.SetActive(false);
-            Heart7.SetActive(false);
-            Heart8.SetActive(false);
-            Heart9.SetActive(false);
-            Heart10.SetActive(false);
-        }
-        else if (player.vidas == 4)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(true);
-            Heart3.SetActive(true);
-            Heart4.SetActive(true);
-            Heart5.SetActive(false);
-            Heart6.SetActive(false);
-            Heart7.SetActive(false);
-            Heart8.SetActive(false);
-            Heart9.SetActive(false);
-            Heart10.SetActive(false);
-        }
-        else if (player.vidas == 3)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(true);
-            Heart3.SetActive(true);
-            Heart4.SetActive(false);
-            Heart5.SetActive(false);
-            Heart6.SetActive(false);
-            Heart7.SetActive(false);
-            Heart8.SetActive(false);
-            Heart9.SetActive(false);
-            Heart10.SetActive(false);
-        }
-        else if (player.vidas == 2)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(true);
-            Heart3.SetActive(false);
-            Heart4.SetActive(false);
-            Heart5.SetActive(false);
-            Heart6.SetActive(false);
-            Heart7.SetActive(false);
-            Heart8.SetActive(false);
-            Heart9.SetActive(false);
-            Heart10.SetActive(false);
-        }
-        else if (player.vidas == 1)
-        {
-            Heart1.SetActive(true);
-            Heart2.SetActive(false);
-            Heart3.SetActive(false);
-            Heart4.SetActive(false);
-            Heart5.SetActive(false);
-            Heart6.SetActive(false);
-            Heart7.SetActive(false);
-            Heart8.SetActive(false);
-            Heart9.SetActive(false);
-            Heart10.SetActive(false);
-        }
-        else if (player.vidas == 0)
-        {
-            Heart1.SetActive(false);
-            Heart2.SetActive(false);
-            Heart3.SetActive(false);
-            Heart4.SetActive(false);
-            Heart5.SetActive(false);
-            Heart6.SetActive(false);
-            Heart7.SetActive(false);
-            Heart8.SetActive(false);
-            Heart9.SetActive(false);
-            Heart10.SetActive(false);
+            case 10:
+                Heart1.SetActive(true);
+                Heart2.SetActive(true);
+                Heart3.SetActive(true);
+                Heart4.SetActive(true);
+                Heart5.SetActive(true);
+                Heart6.SetActive(true);
+                Heart7.SetActive(true);
+                Heart8.SetActive(true);
+                Heart9.SetActive(true);
+                Heart10.SetActive(true);
+                break;
+
+            case 9:
+                Heart1.SetActive(true);
+                Heart2.SetActive(true);
+                Heart3.SetActive(true);
+                Heart4.SetActive(true);
+                Heart5.SetActive(true);
+                Heart6.SetActive(true);
+                Heart7.SetActive(true);
+                Heart8.SetActive(true);
+                Heart9.SetActive(true);
+                Heart10.SetActive(false);
+                break;
+
+            case 8:
+                Heart1.SetActive(true);
+                Heart2.SetActive(true);
+                Heart3.SetActive(true);
+                Heart4.SetActive(true);
+                Heart5.SetActive(true);
+                Heart6.SetActive(true);
+                Heart7.SetActive(true);
+                Heart8.SetActive(true);
+                Heart9.SetActive(false);
+                Heart10.SetActive(false);
+                break;
+
+            case 7:
+                Heart1.SetActive(true);
+                Heart2.SetActive(true);
+                Heart3.SetActive(true);
+                Heart4.SetActive(true);
+                Heart5.SetActive(true);
+                Heart6.SetActive(true);
+                Heart7.SetActive(true);
+                Heart8.SetActive(false);
+                Heart9.SetActive(false);
+                Heart10.SetActive(false);
+                break;
+
+            case 6:
+                Heart1.SetActive(true);
+                Heart2.SetActive(true);
+                Heart3.SetActive(true);
+                Heart4.SetActive(true);
+                Heart5.SetActive(true);
+                Heart6.SetActive(true);
+                Heart7.SetActive(false);
+                Heart8.SetActive(false);
+                Heart9.SetActive(false);
+                Heart10.SetActive(false);
+                break;
+
+            case 5:
+                Heart1.SetActive(true);
+                Heart2.SetActive(true);
+                Heart3.SetActive(true);
+                Heart4.SetActive(true);
+                Heart5.SetActive(true);
+                Heart6.SetActive(false);
+                Heart7.SetActive(false);
+                Heart8.SetActive(false);
+                Heart9.SetActive(false);
+                Heart10.SetActive(false);
+                break;
+
+            case 4:
+                Heart1.SetActive(true);
+                Heart2.SetActive(true);
+                Heart3.SetActive(true);
+                Heart4.SetActive(true);
+                Heart5.SetActive(false);
+                Heart6.SetActive(false);
+                Heart7.SetActive(false);
+                Heart8.SetActive(false);
+                Heart9.SetActive(false);
+                Heart10.SetActive(false);
+                break;
+
+            case 3:
+                Heart1.SetActive(true);
+                Heart2.SetActive(true);
+                Heart3.SetActive(true);
+                Heart4.SetActive(false);
+                Heart5.SetActive(false);
+                Heart6.SetActive(false);
+                Heart7.SetActive(false);
+                Heart8.SetActive(false);
+                Heart9.SetActive(false);
+                Heart10.SetActive(false);
+                break;
+
+            case 2:
+                Heart1.SetActive(true);
+                Heart2.SetActive(true);
+                Heart3.SetActive(false);
+                Heart4.SetActive(false);
+                Heart5.SetActive(false);
+                Heart6.SetActive(false);
+                Heart7.SetActive(false);
+                Heart8.SetActive(false);
+                Heart9.SetActive(false);
+                Heart10.SetActive(false);
+                break;
+
+            case 1:
+                Heart1.SetActive(true);
+                Heart2.SetActive(false);
+                Heart3.SetActive(false);
+                Heart4.SetActive(false);
+                Heart5.SetActive(false);
+                Heart6.SetActive(false);
+                Heart7.SetActive(false);
+                Heart8.SetActive(false);
+                Heart9.SetActive(false);
+                Heart10.SetActive(false);
+                break;
+
+            case 0:
+                Heart1.SetActive(false);
+                Heart2.SetActive(false);
+                Heart3.SetActive(false);
+                Heart4.SetActive(false);
+                Heart5.SetActive(false);
+                Heart6.SetActive(false);
+                Heart7.SetActive(false);
+                Heart8.SetActive(false);
+                Heart9.SetActive(false);
+                Heart10.SetActive(false);
+                break;
         }
     }
 }
