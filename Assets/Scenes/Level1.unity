@@ -27215,16 +27215,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1753299946}
-  Heart1: {fileID: 423828618}
-  Heart2: {fileID: 1776413228}
-  Heart3: {fileID: 1712023114}
-  Heart4: {fileID: 1224510262}
-  Heart5: {fileID: 1611368193}
-  Heart6: {fileID: 178101164}
-  Heart7: {fileID: 1762514559}
-  Heart8: {fileID: 2033006953}
-  Heart9: {fileID: 253421071}
-  Heart10: {fileID: 715729745}
+  hearts:
+  - {fileID: 423828618}
+  - {fileID: 1776413228}
+  - {fileID: 1712023114}
+  - {fileID: 1224510262}
+  - {fileID: 1611368193}
+  - {fileID: 178101164}
+  - {fileID: 1762514559}
+  - {fileID: 2033006953}
+  - {fileID: 253421071}
+  - {fileID: 715729745}
 --- !u!4 &1850716193
 Transform:
   m_ObjectHideFlags: 0
