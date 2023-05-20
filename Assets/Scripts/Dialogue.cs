@@ -8,7 +8,7 @@ public class Dialogue : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             dialogueBox.SetActive(true);
         }
@@ -16,10 +16,14 @@ public class Dialogue : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             dialogueBox.SetActive(false);
         }
+    }
 
+    public void ToggleDialogue()
+    {
+        dialogueBox.SetActive(!dialogueBox.activeSelf);
     }
 }
