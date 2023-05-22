@@ -26,7 +26,7 @@ Aldo Guzman \
 [www.aldoguzman.design](https://aldoguzman.design) \
 [www.playbamba.online](https://playbamba.online)
 
-I’m a UX/UI and Web Designer from Mexico, currently living in Israel. I don’t consider myself a Developer, but I code on Javascript for React websites and C# for Unity.
+I’m a UX/UI and Web Designer from Mexico, currently living in Israel. I don’t consider myself a Developer, but I know HTML, CSS, Saas and Javascript for creating websites and C# for Unity.
  
 I enjoy reading about startups & tech, traveling, taking photos, riding my bike, and roaming the streets alongside with Bamba. I also enjoy playing RPG video games, watching sci-fi movies, and listening to sad but pretty, dreamy rock songs.
 
