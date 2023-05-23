@@ -10314,6 +10314,9 @@ GameObject:
   - component: {fileID: 1636462498}
   - component: {fileID: 1636462501}
   - component: {fileID: 1636462500}
+  - component: {fileID: 1636462504}
+  - component: {fileID: 1636462503}
+  - component: {fileID: 1636462502}
   m_Layer: 0
   m_Name: Yeti
   m_TagString: Untagged
@@ -10434,6 +10437,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4, y: 1.6448572}
   m_EdgeRadius: 0
+--- !u!114 &1636462502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636462497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2196666a9b6df459b986ba093bcfb3c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1636462503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636462497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11102e9d750b4ff091230bfaf713d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1636462504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636462497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac02540d6ccfd4734b538d209d8e9011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1638571699
 GameObject:
   m_ObjectHideFlags: 0
@@ -16848,16 +16887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1753299946}
-  Heart1: {fileID: 423828618}
-  Heart2: {fileID: 1776413228}
-  Heart3: {fileID: 1712023114}
-  Heart4: {fileID: 1224510262}
-  Heart5: {fileID: 1611368193}
-  Heart6: {fileID: 178101164}
-  Heart7: {fileID: 1762514559}
-  Heart8: {fileID: 2033006953}
-  Heart9: {fileID: 253421071}
-  Heart10: {fileID: 715729745}
+  hearts: []
 --- !u!4 &1850716193
 Transform:
   m_ObjectHideFlags: 0
