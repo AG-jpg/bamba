@@ -24,4 +24,20 @@ public class Boss : MonoBehaviour
     public float distance;
     private bool CanShoot;
     private int MaxLife;
+
+    [Header("Stadistics")]
+    public float detectionArea;
+    public float attackArea;
+    public float speedMovement;
+    public bool isAttacking;
+    public bool applyForce;
+    private bool shaking;
+    private bool spawnActive;
+    private int attackCount = 0;
+    public bool isKO;
+    public int actualPhase = 1;
+    public int vidas;
+    public string bossName;
+
+    
 }
