@@ -12,7 +12,7 @@ public class Boss : MonoBehaviour
     [HideInInspector]
     public Animator anim;
     [HideInInspector]
-    public SproteRenderer sp;
+    public SpriteRenderer sp;
 
     private CinemachineVirtualCamera cm;
     private ImpactArea impact;
