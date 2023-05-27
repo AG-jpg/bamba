@@ -45,4 +45,16 @@ public class Boss : MonoBehaviour
     public Transform attackPoint;
     public GameObject snowman;
     public GameObject spawner;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        cm = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
+        sp = GetComponent<SpriteRenderer>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        anim = GetComponent<Animator>();
+        impact = transform.GetChild(0).GetComponent<ImpactArea>();
+        MaxLife = lives;
+        gameObject.name = bossName;
+    }
 }
