@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [HideInInspector]
+    public Rigidbody2D rb;
+    [HideInInspector]
+    public PlayerController player;
+    [HideInInspector]
+    public Animator anim;
+    [HideInInspector]
+    public SproteRenderer sp;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private CinemachineVirtualCamera cm;
+    private ImpactArea impact;
+    
+    private MonoBehaviour actualState;
+    public MonoBehaviour chaseState;
+    public MonoBehaviour attackState;
+
+    [HideInInspector]
+    public float distance;
+    private bool CanShoot;
+    private int MaxLife;
 }
