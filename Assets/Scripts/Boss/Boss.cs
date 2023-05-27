@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Boss : MonoBehaviour
 {
@@ -39,5 +40,9 @@ public class Boss : MonoBehaviour
     public int vidas;
     public string bossName;
 
-    
+    [Header("References")]
+    public GameObject bullet;
+    public Transform attackPoint;
+    public GameObject snowman;
+    public GameObject spawner;
 }
