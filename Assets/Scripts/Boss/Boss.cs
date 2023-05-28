@@ -54,7 +54,7 @@ public class Boss : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         anim = GetComponent<Animator>();
         impact = transform.GetChild(0).GetComponent<ImpactArea>();
-        MaxLife = lives;
+        MaxLife = vidas;
         gameObject.name = bossName;
     }
 }
