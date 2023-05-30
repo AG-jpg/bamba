@@ -68,4 +68,31 @@ public class Boss : MonoBehaviour
         actualState = newState;
         actualState.enabled = true;
     }
+
+    private void ManagePhase(int phase)
+    {
+        switch(phase)
+        {
+            case 2:
+            if(!spawnActive)
+            {
+                StartCoroutine(Spawner());
+            }
+        }
+    }
+
+    private IEnumerator Spawner()
+    {
+        spawnActive = true;
+
+        while(true)
+        {
+            yield return new WaitForSeconds(5);
+            for(int i = 0; i < spawner.transform.childCount; i++)
+            {
+                Instantiate(snowman, spawner.transform.GetChild(i).transform.position, Quaternion.identity);
+            }
+        }
+    }
+
 }
