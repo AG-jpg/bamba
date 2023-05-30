@@ -57,4 +57,15 @@ public class Boss : MonoBehaviour
         MaxLife = vidas;
         gameObject.name = bossName;
     }
+
+    public void ActivateState(MonoBehavioir newState)
+    {
+        if(actualState != null)
+        {
+            actualState.enabled = false;
+        }
+
+        actualState = newState;
+        actualState.enabled = true;
+    }
 }
