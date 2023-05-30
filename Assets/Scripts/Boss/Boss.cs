@@ -98,7 +98,10 @@ public class Boss : MonoBehaviour
     public void Shake()
     {
         impact.SetMakesDamage(true);
-        
+        if(attackCount == 3)
+        {
+            StartCoroutine(KnockOut());
+        }
     }
 
     private void CambiarVista(float direccionX)
