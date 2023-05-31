@@ -104,6 +104,18 @@ public class Boss : MonoBehaviour
         }
     }
 
+    private IEnumerator KnockOut()
+    {
+        isKO = true;
+        anim.SetBool("Stun", true);
+        yield return new WaitForSeconds(3);
+        isKO = false;
+        anim.SetBool("Stun", false);
+        attackCount = 0;
+    }
+
+    
+
     private void CambiarVista(float direccionX)
         {
             if(direccionX < 0 && transform.localScale.x > 0)
