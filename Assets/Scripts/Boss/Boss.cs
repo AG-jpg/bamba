@@ -124,7 +124,13 @@ public class Boss : MonoBehaviour
 
     private IEnumerator BulletsCreate()
     {
-        
+        CreateBullets = false;
+        Vector2 posicion = new Vector2(attackPoint.transform.position.x,
+        attackPoint.transform.position.y - attackArea);
+
+        GameObject go = Instantiate(bullet, (Vector2).attackPoint.transform.position + (Vector2.right * 3 *transform.localScale.x), Quaternion.identity);
+
+        float angle = 45;
     }
 
     private void CambiarVista(float direccionX)
