@@ -114,7 +114,18 @@ public class Boss : MonoBehaviour
         attackCount = 0;
     }
 
-    
+    public void CreateBullets()
+    {
+        if(actualPhase == 3)
+        {
+            StartCoroutine(BulletsCreate());
+        }
+    }
+
+    private IEnumerator BulletsCreate()
+    {
+        
+    }
 
     private void CambiarVista(float direccionX)
         {
