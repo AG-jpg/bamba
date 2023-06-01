@@ -16,7 +16,7 @@ public class Boss : MonoBehaviour
 
     private CinemachineVirtualCamera cm;
     private ImpactArea impact;
-    
+
     private MonoBehaviour actualState;
     public MonoBehaviour chaseState;
     public MonoBehaviour attackState;
@@ -60,7 +60,7 @@ public class Boss : MonoBehaviour
 
     public void ActivateState(MonoBehaviour newState)
     {
-        if(actualState != null)
+        if (actualState != null)
         {
             actualState.enabled = false;
         }
@@ -71,13 +71,13 @@ public class Boss : MonoBehaviour
 
     private void ManagePhase(int phase)
     {
-        switch(phase)
+        switch (phase)
         {
             case 2:
-            if(!spawnActive)
-            {
-                StartCoroutine(Spawner());
-            }
+                if (!spawnActive)
+                {
+                    StartCoroutine(Spawner());
+                }
         }
     }
 
@@ -85,10 +85,10 @@ public class Boss : MonoBehaviour
     {
         spawnActive = true;
 
-        while(true)
+        while (true)
         {
             yield return new WaitForSeconds(5);
-            for(int i = 0; i < spawner.transform.childCount; i++)
+            for (int i = 0; i < spawner.transform.childCount; i++)
             {
                 Instantiate(snowman, spawner.transform.GetChild(i).transform.position, Quaternion.identity);
             }
@@ -98,7 +98,7 @@ public class Boss : MonoBehaviour
     public void Shake()
     {
         impact.SetMakesDamage(true);
-        if(attackCount == 3)
+        if (attackCount == 3)
         {
             StartCoroutine(KnockOut());
         }
@@ -116,7 +116,7 @@ public class Boss : MonoBehaviour
 
     public void CreateBullets()
     {
-        if(actualPhase == 3)
+        if (actualPhase == 3)
         {
             StartCoroutine(BulletsCreate());
         }
@@ -128,15 +128,15 @@ public class Boss : MonoBehaviour
         Vector2 posicion = new Vector2(attackPoint.transform.position.x,
         attackPoint.transform.position.y - attackArea);
 
-        GameObject go = Instantiate(bullet, (Vector2).attackPoint.transform.position + (Vector2.right * 3 *transform.localScale.x), Quaternion.identity);
+        GameObject go = Instantiate(bullet, (Vector2).attackPoint.transform.position + (Vector2.right * 3 * transform.localScale.x), Quaternion.identity);
 
         float angle = 45;
-        if(transform.localScale.x < 0)
+        if (transform.localScale.x < 0)
         {
             angle = 135;
         }
 
-        go.GetComponent<Rigidbody2D>().velocity = 
+        go.GetComponent<Rigidbody2D>().velocity =
         new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)).normalized * 8;
 
         yield return new WaitForSeconds(3);
@@ -148,10 +148,11 @@ public class Boss : MonoBehaviour
         distance = Vector2.Distance(transform.position, player.transform.position);
         anim.SetFloat("distance", distance);
 
-        if(MaxLife/3 >= vidas)
+        if (MaxLife / 3 >= vidas)
         {
             actualPhase = 3;
-        } else if(2 * MaxLife/3 >= vidas)
+        }
+        else if (2 * MaxLife / 3 >= vidas)
         {
             actualPhase = 2;
         }
@@ -160,14 +161,24 @@ public class Boss : MonoBehaviour
     }
 
     private void CambiarVista(float direccionX)
+    {
+        if (direccionX < 0 && transform.localScale.x > 0)
         {
-            if(direccionX < 0 && transform.localScale.x > 0)
-            {
-                transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
-            }else if(direccionX > 0 && transform.localScale.x < 0)
-            {
-                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            }
+            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
+        else if (direccionX > 0 && transform.localScale.x < 0)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+    }
+
+    private void Die()
+    {
+        if(vidas <= 0)
+        {
+            rb.velocity = Vector2.zero;
+            Destroy(gameObject, 0.2f);
+        }
+    }
 
 }
