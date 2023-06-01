@@ -143,6 +143,22 @@ public class Boss : MonoBehaviour
         CanShoot = true;
     }
 
+    private void Update()
+    {
+        distance = Vector2.Distance(transform.position, player.transform.position);
+        anim.SetFloat("distance", distance);
+
+        if(MaxLife/3 >= vidas)
+        {
+            actualPhase = 3;
+        } else if(2 * MaxLife/3 >= vidas)
+        {
+            actualPhase = 2;
+        }
+
+        ManagePhase(actualPhase);
+    }
+
     private void CambiarVista(float direccionX)
         {
             if(direccionX < 0 && transform.localScale.x > 0)
