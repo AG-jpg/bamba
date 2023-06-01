@@ -131,6 +131,16 @@ public class Boss : MonoBehaviour
         GameObject go = Instantiate(bullet, (Vector2).attackPoint.transform.position + (Vector2.right * 3 *transform.localScale.x), Quaternion.identity);
 
         float angle = 45;
+        if(transform.localScale.x < 0)
+        {
+            angle = 135;
+        }
+
+        go.GetComponent<Rigidbody2D>().velocity = 
+        new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)).normalized * 8;
+
+        yield return new WaitForSeconds(3);
+        CanShoot = true;
     }
 
     private void CambiarVista(float direccionX)
