@@ -58,7 +58,7 @@ public class Boss : MonoBehaviour
         gameObject.name = bossName;
     }
 
-    public void ActivateState(MonoBehavioir newState)
+    public void ActivateState(MonoBehaviour newState)
     {
         if(actualState != null)
         {
