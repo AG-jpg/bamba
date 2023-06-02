@@ -32,4 +32,17 @@ public class ImpactArea : MonoBehaviour
             isDetecting = false;
         }
     }
+
+    private void Update()
+    {
+        if(makesDamage)
+        {
+            if(isDetecting)
+            {
+                GameManager.instance.player.RecibirDano;
+            }
+
+            makesDamage = false;
+        }
+    }
 }
