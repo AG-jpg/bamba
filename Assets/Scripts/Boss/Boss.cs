@@ -128,7 +128,8 @@ public class Boss : MonoBehaviour
         Vector2 posicion = new Vector2(attackPoint.transform.position.x,
         attackPoint.transform.position.y - attackArea);
 
-        GameObject go = Instantiate(bullet, (Vector2).attackPoint.transform.position + (Vector2.right * 3 * transform.localScale.x), Quaternion.identity);
+        GameObject go = Instantiate(bullet, (Vector2)attackPoint.transform.position +
+        (Vector2.right * 3 * transform.localScale.x), Quaternion.identity);
 
         float angle = 45;
         if (transform.localScale.x < 0)
