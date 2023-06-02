@@ -114,7 +114,7 @@ public class Boss : MonoBehaviour
         attackCount = 0;
     }
 
-    public void CreateBullets()
+    public void CreateBullet()
     {
         if (actualPhase == 3)
         {
@@ -124,7 +124,7 @@ public class Boss : MonoBehaviour
 
     private IEnumerator BulletsCreate()
     {
-        CreateBullets = false;
+        CanShoot = false;
         Vector2 posicion = new Vector2(attackPoint.transform.position.x,
         attackPoint.transform.position.y - attackArea);
 
