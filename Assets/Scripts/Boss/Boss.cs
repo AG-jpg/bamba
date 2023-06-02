@@ -196,4 +196,18 @@ public class Boss : MonoBehaviour
         }
     }
 
+    public void DeactivateAttack()
+    {
+        isAttacking = false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionArea);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackArea);
+    }
+
 }
