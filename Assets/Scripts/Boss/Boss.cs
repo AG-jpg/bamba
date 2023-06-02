@@ -78,6 +78,7 @@ public class Boss : MonoBehaviour
                 {
                     StartCoroutine(Spawner());
                 }
+                break;
         }
     }
 
@@ -174,7 +175,7 @@ public class Boss : MonoBehaviour
 
     private void Die()
     {
-        if(vidas <= 0)
+        if (vidas <= 0)
         {
             rb.velocity = Vector2.zero;
             Destroy(gameObject, 0.2f);
