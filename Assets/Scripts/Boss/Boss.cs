@@ -182,4 +182,18 @@ public class Boss : MonoBehaviour
         }
     }
 
+    public void Movement(float d)
+    {
+        if(d <= attackArea)
+        {
+            ActivateState(attackState);
+        } else
+        {
+            if(!isAttacking)
+            {
+                ActivateState(chaseState);
+            }
+        }
+    }
+
 }
