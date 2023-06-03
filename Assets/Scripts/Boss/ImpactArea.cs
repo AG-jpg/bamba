@@ -7,7 +7,7 @@ public class ImpactArea : MonoBehaviour
     private bool makesDamage;
     private bool isDetecting;
 
-    public void GetMakesDamage()
+    public bool GetMakesDamage()
     {
         return makesDamage;
     }
@@ -33,7 +33,7 @@ public class ImpactArea : MonoBehaviour
         }
     }
 
-    private void Update()
+    void Update()
     {
         if(makesDamage)
         {
