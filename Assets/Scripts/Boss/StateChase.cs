@@ -6,12 +6,12 @@ public class StateChase : MonoBehaviour
 {
     private Boss boss;
 
-   private void Awake()
-   {
-    boss = GetComponent<Boss>();
-   }
+    private void Awake()
+    {
+        boss = GetComponent<Boss>();
+    }
 
-       private void CambiarVista(float direccionX)
+    private void CambiarVista(float direccionX)
     {
         if (direccionX < 0 && transform.localScale.x > 0)
         {
@@ -25,13 +25,13 @@ public class StateChase : MonoBehaviour
 
     private void Update()
     {
-        if(boss.distance <= boss.attackArea)
+        if (boss.distance <= boss.attackArea)
         {
             boss.ActivateState(boss.attackState);
         }
         else
         {
-            if(!boss.isAttacking && !boss.isKO)
+            if (!boss.isAttacking && !boss.isKO)
             {
                 Movement();
             }
@@ -40,7 +40,7 @@ public class StateChase : MonoBehaviour
 
     private void Movement()
     {
-        if(boss.distance <= boss.detectionArea)
+        if (boss.distance <= boss.detectionArea)
         {
             Vector3 direccion = (transform.position - boss.player.transform.position).normalized;
             CambiarVista(-direccion.x);

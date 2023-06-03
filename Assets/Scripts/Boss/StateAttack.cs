@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class StateAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Boss boss;
+
+    private void Awake()
     {
-        
+        boss = GetComponent<Boss>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(!boss.isAttacking)
+        {
+            boss.rb.velocity = Vector2.zero;
+        }
+
+        if(boss.distance > boss.attackArea)
+        {
+            boss.ActivateState(boss.chaseState);
+        }
     }
 }
