@@ -19,7 +19,7 @@ public class ImpactArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("player"))
+        if(collision.CompareTag("Player"))
         {
             isDetecting = true;
         }
@@ -27,7 +27,7 @@ public class ImpactArea : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("player"))
+        if(collision.CompareTag("Player"))
         {
             isDetecting = false;
         }
