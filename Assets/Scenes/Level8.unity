@@ -9336,7 +9336,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636462497}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2196666a9b6df459b986ba093bcfb3c9, type: 3}
   m_Name: 
@@ -9348,7 +9348,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636462497}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c11102e9d750b4ff091230bfaf713d2a, type: 3}
   m_Name: 
@@ -9369,21 +9369,21 @@ MonoBehaviour:
   player: {fileID: 0}
   anim: {fileID: 0}
   sp: {fileID: 0}
-  chaseState: {fileID: 0}
-  attackState: {fileID: 0}
+  chaseState: {fileID: 1636462502}
+  attackState: {fileID: 1636462503}
   distance: 0
-  detectionArea: 0
-  attackArea: 0
-  speedMovement: 0
+  detectionArea: 7
+  attackArea: 2
+  speedMovement: 2
   isAttacking: 0
   applyForce: 0
   isKO: 0
   actualPhase: 1
-  vidas: 0
-  bossName: 
-  bullet: {fileID: 0}
-  attackPoint: {fileID: 0}
-  snowman: {fileID: 0}
+  vidas: 10
+  bossName: Boss
+  bullet: {fileID: 528402709279918096, guid: d026f41f0069c43b5b8f5379a5a9ad19, type: 3}
+  attackPoint: {fileID: 1822780437}
+  snowman: {fileID: 458515838856208517, guid: 0ffa51c3e99c940a4aa3805fa39bc779, type: 3}
   spawner: {fileID: 0}
 --- !u!50 &1636462505
 Rigidbody2D:
