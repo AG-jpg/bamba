@@ -45,6 +45,7 @@ public class Boss : MonoBehaviour
     public Transform attackPoint;
     public GameObject snowman;
     public GameObject spawner;
+    public GameObject snow;
 
     private void Awake()
     {
@@ -173,12 +174,13 @@ public class Boss : MonoBehaviour
 
     public void Movement(float d)
     {
-        if(d <= attackArea)
+        if (d <= attackArea)
         {
             ActivateState(attackState);
-        } else
+        }
+        else
         {
-            if(!isAttacking)
+            if (!isAttacking)
             {
                 ActivateState(chaseState);
             }
@@ -199,4 +201,42 @@ public class Boss : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackArea);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Attack"))
+        {
+            RecibirDano();
+        }
+
+    }
+
+    public void RecibirDano()
+    {
+        if(vidas > 0)
+        {
+            StartCoroutine(DamageImpact());
+            applyForce = true;
+            vidas--;
+        }
+
+    }
+
+    private IEnumerator DamageImpact()
+    {
+        Time.timeScale = 0.4f;
+        yield return new WaitForSeconds(0.2f);
+        Time.timeScale = 1;
+
+        Die();
+    }
+
+    private void FixedUpdate()
+    {
+        if (applyForce)
+        {
+            speedMovement = 0;
+            rb.velocity = Vector2.zero;
+            applyForce = false;
+        }
+    }
 }
