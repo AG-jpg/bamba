@@ -39,7 +39,7 @@ public class ImpactArea : MonoBehaviour
         {
             if(isDetecting)
             {
-                GameManager.instance.player.RecibirDano;
+                GameManager.instance.player.RecibirDano();
             }
 
             makesDamage = false;
