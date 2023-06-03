@@ -31,6 +31,10 @@ public class Attack : MonoBehaviour
         {
             audioSource.PlayOneShot(stomp);
             Instantiate(snow, transform.position, transform.rotation);
+        }else if(collision.CompareTag("Boss"))
+        {
+            audioSource.PlayOneShot(stomp);
+            Instantiate(snow, transform.position, transform.rotation);
         }
     }
 }
