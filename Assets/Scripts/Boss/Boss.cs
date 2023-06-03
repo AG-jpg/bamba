@@ -149,7 +149,7 @@ public class Boss : MonoBehaviour
     private void Update()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
-        anim.SetFloat("distance", distance);
+        anim.SetFloat("Distance", distance);
 
         if (MaxLife / 3 >= vidas)
         {
