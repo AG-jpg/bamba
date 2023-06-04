@@ -9210,7 +9210,7 @@ GameObject:
   - component: {fileID: 1636462502}
   m_Layer: 0
   m_Name: Yeti
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9372,9 +9372,9 @@ MonoBehaviour:
   chaseState: {fileID: 1636462502}
   attackState: {fileID: 1636462503}
   distance: 0
-  detectionArea: 7
-  attackArea: 2
-  speedMovement: 2
+  detectionArea: 10
+  attackArea: 3
+  speedMovement: 3
   isAttacking: 0
   applyForce: 0
   isKO: 0
@@ -9385,6 +9385,7 @@ MonoBehaviour:
   attackPoint: {fileID: 1822780437}
   snowman: {fileID: 458515838856208517, guid: 0ffa51c3e99c940a4aa3805fa39bc779, type: 3}
   spawner: {fileID: 0}
+  snow: {fileID: 3020058892947257623, guid: d0659a0bb43154296b4d7e8293ab333d, type: 3}
 --- !u!50 &1636462505
 Rigidbody2D:
   serializedVersion: 4
@@ -9397,7 +9398,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -15530,8 +15531,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2850077, y: -0.40716588}
-  m_Size: {x: 2.411526, y: 1.5429275}
+  m_Offset: {x: -1.1732652, y: -0.53572416}
+  m_Size: {x: 1.5429358, y: 1.095777}
   m_Direction: 1
 --- !u!114 &1822780439
 MonoBehaviour:
