@@ -6,15 +6,21 @@ public class ImpactArea : MonoBehaviour
 {
     private bool makesDamage;
     private bool isDetecting;
+    private PlayerController player;
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+    }
 
     public bool GetMakesDamage()
     {
         return makesDamage;
     }
 
-    public void SetMakesDamage(bool newmakesDamage)
+    public void SetMakesDamage(bool newMakesDamage)
     {
-        makesDamage = newmakesDamage;
+        makesDamage = newMakesDamage;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,6 +28,7 @@ public class ImpactArea : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             isDetecting = true;
+            makesDamage = true;
         }
     }
 
@@ -30,18 +37,15 @@ public class ImpactArea : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             isDetecting = false;
+            makesDamage = false;
         }
     }
 
     void Update()
     {
-        if(makesDamage)
+        if (makesDamage && isDetecting)
         {
-            if(isDetecting)
-            {
-                GameManager.instance.player.RecibirDano();
-            }
-
+            player.RecibirDano((transform.position - player.transform.position).normalized);
             makesDamage = false;
         }
     }
