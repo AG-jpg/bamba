@@ -35,7 +35,7 @@ public class Boss : MonoBehaviour
     private bool shaking;
     private bool spawnActive;
     private int attackCount = 0;
-    public bool isKO;
+    public bool isKO = false;
     public int actualPhase = 1;
     public int vidas;
     public string bossName;
@@ -45,6 +45,7 @@ public class Boss : MonoBehaviour
     public Transform attackPoint;
     public GameObject snowman;
     public GameObject spawner;
+    public GameObject snow;
 
     private void Awake()
     {
@@ -108,10 +109,10 @@ public class Boss : MonoBehaviour
     private IEnumerator KnockOut()
     {
         isKO = true;
-        anim.SetBool("Stun", true);
+        anim.SetBool("Stunt", true);
         yield return new WaitForSeconds(3);
         isKO = false;
-        anim.SetBool("Stun", false);
+        anim.SetBool("Stunt", false);
         attackCount = 0;
     }
 
@@ -148,7 +149,7 @@ public class Boss : MonoBehaviour
     private void Update()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
-        anim.SetFloat("distance", distance);
+        anim.SetFloat("Distance", distance);
 
         if (MaxLife / 3 >= vidas)
         {
@@ -162,35 +163,25 @@ public class Boss : MonoBehaviour
         ManagePhase(actualPhase);
     }
 
-    private void CambiarVista(float direccionX)
-    {
-        if (direccionX < 0 && transform.localScale.x > 0)
-        {
-            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        }
-        else if (direccionX > 0 && transform.localScale.x < 0)
-        {
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-    }
-
     private void Die()
     {
         if (vidas <= 0)
         {
             rb.velocity = Vector2.zero;
+            Instantiate(snow, transform.position, transform.rotation);
             Destroy(gameObject, 0.2f);
         }
     }
 
-    public void Movement(float d)
+    public void Movement(float distance)
     {
-        if(d <= attackArea)
+        if (distance <= attackArea)
         {
             ActivateState(attackState);
-        } else
+        }
+        else
         {
-            if(!isAttacking)
+            if (!isAttacking)
             {
                 ActivateState(chaseState);
             }
@@ -211,4 +202,42 @@ public class Boss : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackArea);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Attack"))
+        {
+            RecibirDano();
+        }
+
+    }
+
+    public void RecibirDano()
+    {
+        if(vidas > 0)
+        {
+            StartCoroutine(DamageImpact());
+            applyForce = true;
+            vidas--;
+        }
+
+    }
+
+    private IEnumerator DamageImpact()
+    {
+        Time.timeScale = 0.4f;
+        yield return new WaitForSeconds(0.2f);
+        Time.timeScale = 1;
+
+        Die();
+    }
+
+    private void FixedUpdate()
+    {
+        if (applyForce)
+        {
+            speedMovement = 0;
+            rb.velocity = Vector2.zero;
+            applyForce = false;
+        }
+    }
 }
