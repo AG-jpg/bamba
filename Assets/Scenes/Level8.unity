@@ -3506,6 +3506,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &620543533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 620543534}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &620543534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620543533}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 49.993, y: -2.298, z: -0.2491251}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &632045836
 GameObject:
   m_ObjectHideFlags: 0
@@ -9266,7 +9297,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &1636462499
 Transform:
   m_ObjectHideFlags: 0
@@ -9275,7 +9306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636462497}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50, y: -1.8, z: 0}
+  m_LocalPosition: {x: 50, y: -3.015, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9316,10 +9347,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.37757146}
+  m_Offset: {x: 0, y: 0.8161804}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 2.4, y: 2.4}
     newSize: {x: 2.4, y: 2.4}
     adaptiveTilingThreshold: 0.5
@@ -9327,7 +9358,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4, y: 1.6448572}
+  m_Size: {x: 2.4, y: 1.6350323}
   m_EdgeRadius: 0
 --- !u!114 &1636462502
 MonoBehaviour:
@@ -9384,7 +9415,7 @@ MonoBehaviour:
   bullet: {fileID: 528402709279918096, guid: d026f41f0069c43b5b8f5379a5a9ad19, type: 3}
   attackPoint: {fileID: 1822780437}
   snowman: {fileID: 458515838856208517, guid: 0ffa51c3e99c940a4aa3805fa39bc779, type: 3}
-  spawner: {fileID: 0}
+  spawner: {fileID: 620543533}
   snow: {fileID: 3020058892947257623, guid: d0659a0bb43154296b4d7e8293ab333d, type: 3}
 --- !u!50 &1636462505
 Rigidbody2D:
@@ -15531,8 +15562,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.1732652, y: -0.53572416}
-  m_Size: {x: 1.5429358, y: 1.095777}
+  m_Offset: {x: -1.2688102, y: 0.54545647}
+  m_Size: {x: 1.5472758, y: 0.7493972}
   m_Direction: 1
 --- !u!114 &1822780439
 MonoBehaviour:
