@@ -28,7 +28,7 @@ public class ImpactArea : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             isDetecting = true;
-            makesDamage = true;
+            //makesDamage = true;
         }
     }
 
@@ -37,16 +37,16 @@ public class ImpactArea : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             isDetecting = false;
-            makesDamage = false;
         }
     }
 
     void Update()
     {
-        if (makesDamage && isDetecting)
+        if (isDetecting)
         {
-            player.RecibirDano((transform.position - player.transform.position).normalized);
-            makesDamage = false;
+            player.RecibirDano(/*(transform.position - player.transform.position).normalized*/);
         }
+
+        makesDamage = false;
     }
 }
