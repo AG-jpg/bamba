@@ -100,6 +100,7 @@ public class Boss : MonoBehaviour
     public void Shake()
     {
         impact.SetMakesDamage(true);
+        attackCount++;
         if (attackCount == 3)
         {
             StartCoroutine(KnockOut());
