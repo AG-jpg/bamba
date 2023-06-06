@@ -1360,7 +1360,7 @@ Transform:
   - {fileID: 1192847563}
   - {fileID: 1887722256}
   m_Father: {fileID: 423674832}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &227753110
 GameObject:
@@ -1434,7 +1434,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 135a73aa00dc448f8a980b148d5b274b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2195,10 +2195,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 223025917}
   - {fileID: 347682824}
   - {fileID: 1931264012}
   - {fileID: 208983873}
-  - {fileID: 223025917}
   - {fileID: 316333917}
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -9391,14 +9391,14 @@ MonoBehaviour:
   chaseState: {fileID: 1636462502}
   attackState: {fileID: 1636462503}
   distance: 0
-  detectionArea: 10
-  attackArea: 3
-  speedMovement: 3
+  detectionArea: 6
+  attackArea: 2
+  speedMovement: 2
   isAttacking: 0
   applyForce: 0
   isKO: 0
   actualPhase: 1
-  vidas: 10
+  vidas: 8
   bossName: Boss
   bullet: {fileID: 528402709279918096, guid: d026f41f0069c43b5b8f5379a5a9ad19, type: 3}
   attackPoint: {fileID: 1822780437}
