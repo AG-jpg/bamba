@@ -31,7 +31,6 @@ public class Boss : MonoBehaviour
     public float attackArea;
     public float speedMovement;
     public bool isAttacking;
-    public bool applyForce;
     private bool shaking;
     private bool spawnActive;
     private int attackCount = 0;
@@ -43,6 +42,8 @@ public class Boss : MonoBehaviour
     [Header("References")]
     public GameObject bullet;
     public Transform attackPoint;
+
+    public GameObject attackTrigger;
     public GameObject snowman;
     public GameObject spawner;
     public GameObject snow;
@@ -111,9 +112,11 @@ public class Boss : MonoBehaviour
     {
         isKO = true;
         anim.SetBool("Stunt", true);
+        attackTrigger.SetActive(false);
         yield return new WaitForSeconds(3);
         isKO = false;
         anim.SetBool("Stunt", false);
+        attackTrigger.SetActive(true);
         attackCount = 0;
     }
 
@@ -164,6 +167,16 @@ public class Boss : MonoBehaviour
         ManagePhase(actualPhase);
     }
 
+        public void RecibirDano()
+    {
+        if(vidas > 0)
+        {
+            StartCoroutine(DamageImpact());
+            vidas--;
+        }
+
+    }
+
     private void Die()
     {
         if (vidas <= 0)
@@ -174,9 +187,14 @@ public class Boss : MonoBehaviour
         }
     }
 
-    public void Movement(float distance)
+           private IEnumerator DamageImpact()
     {
-        if (distance <= attackArea)
+        yield return new WaitForSeconds(0.2f);
+    }
+
+    public void Movement(float d)
+    {
+        if (d <= attackArea)
         {
             ActivateState(attackState);
         }
@@ -198,7 +216,6 @@ public class Boss : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionArea);
-
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackArea);
     }
@@ -208,37 +225,6 @@ public class Boss : MonoBehaviour
         if (collision.CompareTag("Attack"))
         {
             RecibirDano();
-        }
-
-    }
-
-    public void RecibirDano()
-    {
-        if(vidas > 0)
-        {
-            StartCoroutine(DamageImpact());
-            applyForce = true;
-            vidas--;
-        }
-
-    }
-
-    private IEnumerator DamageImpact()
-    {
-        Time.timeScale = 0.4f;
-        yield return new WaitForSeconds(0.2f);
-        Time.timeScale = 1;
-
-        Die();
-    }
-
-    private void FixedUpdate()
-    {
-        if (applyForce)
-        {
-            speedMovement = 0;
-            rb.velocity = Vector2.zero;
-            applyForce = false;
         }
     }
 }
