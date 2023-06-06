@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class BossWalk : StateMachineBehaviour
 {
-    private BossWalk boss;
+    private Boss boss;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         boss = animator.GetComponent<Boss>();
         if (!boss.isAttacking)
         {
-            boss.ActivateState(boss.StateChase);
+            boss.ActivateState(boss.chaseState);
         }
     }
 }
