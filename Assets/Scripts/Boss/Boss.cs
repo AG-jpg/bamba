@@ -35,7 +35,7 @@ public class Boss : MonoBehaviour
     private bool shaking;
     private bool spawnActive;
     private int attackCount = 0;
-    public bool isKO;
+    public bool isKO = false;
     public int actualPhase = 1;
     public int vidas;
     public string bossName;
@@ -92,7 +92,7 @@ public class Boss : MonoBehaviour
             yield return new WaitForSeconds(5);
             for (int i = 0; i < spawner.transform.childCount; i++)
             {
-                Instantiate(snowman, spawner.transform.GetChild(i).transform.position, Quaternion.identity);
+                Instantiate(snowman, (Vector2)spawner.transform.GetChild(i).transform.position, Quaternion.identity);
             }
         }
     }
@@ -109,10 +109,10 @@ public class Boss : MonoBehaviour
     private IEnumerator KnockOut()
     {
         isKO = true;
-        anim.SetBool("Stun", true);
+        anim.SetBool("Stunt", true);
         yield return new WaitForSeconds(3);
         isKO = false;
-        anim.SetBool("Stun", false);
+        anim.SetBool("Stunt", false);
         attackCount = 0;
     }
 
@@ -168,13 +168,14 @@ public class Boss : MonoBehaviour
         if (vidas <= 0)
         {
             rb.velocity = Vector2.zero;
+            Instantiate(snow, transform.position, transform.rotation);
             Destroy(gameObject, 0.2f);
         }
     }
 
-    public void Movement(float d)
+    public void Movement(float distance)
     {
-        if (d <= attackArea)
+        if (distance <= attackArea)
         {
             ActivateState(attackState);
         }
