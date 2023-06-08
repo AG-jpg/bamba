@@ -49,6 +49,7 @@ Bamba’s Adventure is fully developed in Unity. Coded in C# on Visual Studio Co
 - Level 8: *No.7 Alone With My Thoughts* - Esther Abrami.
 - Level 8: *Cafe Regrette* - Asher Fulero.
 - Game Over: *Earnest* - Kevin MacLeod.
+- End Credits: *Wandering Soul* - Asher Fulero
 - Final Screen: *Snowfall Butterflies* - Asher Fulero
 
 ---
