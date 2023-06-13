@@ -48,6 +48,7 @@ Bamba’s Adventure is fully developed in Unity. Coded in C# on Visual Studio Co
 - Level 7: *No.2 Remembering Her* - Esther Abrami.
 - Level 8: *No.7 Alone With My Thoughts* - Esther Abrami.
 - Level 8: *Cafe Regrette* - Asher Fulero.
+- Win -  *Heroic Reception* - Kevin MacLeod.
 - Game Over: *Earnest* - Kevin MacLeod.
 - End Credits: *Wandering Soul* - Asher Fulero
 - Final Screen: *Snowfall Butterflies* - Asher Fulero
@@ -66,4 +67,10 @@ All info on wildlife, climate change and residual waste was taken from academic 
 Laendler in C Minor Hess 68 de Kevin MacLeod tiene una licencia Atribución 4.0 de Creative Commons. https://creativecommons.org/licenses/by/4.0/
 
 Fuente: http://incompetech.com/music/royalty-free/?keywords=laendler&Search=Search
+Artista: http://incompetech.com/
+
+Heroic Reception de Kevin MacLeod tiene una licencia Atribución 4.0 de Creative Commons. https://creativecommons.org/licenses/by/4.0/
+
+Fuente: http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100206
+
 Artista: http://incompetech.com/
