@@ -41,6 +41,7 @@ public class Boss : MonoBehaviour
 
     [Header("References")]
     public GameObject bullet;
+    public GameObject platform;
     public Transform attackPoint;
 
     public GameObject attackTrigger;
@@ -165,14 +166,14 @@ public class Boss : MonoBehaviour
         }
 
         ManagePhase(actualPhase);
+        Die();
     }
 
         public void RecibirDano()
     {
         if(vidas > 0)
         {
-            StartCoroutine(DamageImpact());
-            vidas--;
+            StartCoroutine(DamageImpact());   
         }
 
     }
@@ -183,13 +184,14 @@ public class Boss : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             Instantiate(snow, transform.position, transform.rotation);
-            Destroy(gameObject, 0.2f);
+            Destroy(gameObject, 0.5f);
+            platform.SetActive(true);
         }
     }
 
            private IEnumerator DamageImpact()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
     }
 
     public void Movement(float d)
@@ -225,6 +227,7 @@ public class Boss : MonoBehaviour
         if (collision.CompareTag("Attack"))
         {
             RecibirDano();
+            vidas--;
         }
     }
 }
