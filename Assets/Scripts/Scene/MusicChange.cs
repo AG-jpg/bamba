@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MusicChange : MonoBehaviour
 {
-    public GameObject trigger;
+    public GameObject dialogueBox;
+    private BoxCollider2D bc;
 
     [Header ("Audio")]
     public AudioSource audioSource;
@@ -13,6 +14,7 @@ public class MusicChange : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        bc = GetComponent<BoxCollider2D>();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -20,6 +22,8 @@ public class MusicChange : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             audioSource.Stop();
+            dialogueBox.SetActive(true);
+            Time.timeScale = 0;
         } 
     }
 
@@ -27,7 +31,8 @@ public class MusicChange : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            trigger.SetActive(false);
+            dialogueBox.SetActive(false);
+            Destroy(bc);
         } 
     }
 }
