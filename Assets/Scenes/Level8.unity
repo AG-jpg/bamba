@@ -3379,6 +3379,7 @@ MonoBehaviour:
   IsPaused: 0
   dialogueBox: {fileID: 656940556}
   audioSource: {fileID: 535122728}
+  battle: {fileID: 8300000, guid: cfc1751e01abb49a78f2ce7c989733e8, type: 3}
 --- !u!1 &542890935
 GameObject:
   m_ObjectHideFlags: 0
