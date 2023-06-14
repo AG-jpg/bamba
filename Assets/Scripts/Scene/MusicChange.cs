@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MusicChange : MonoBehaviour
 {
+    public bool IsPaused = false;
     public GameObject dialogueBox;
     private BoxCollider2D bc;
 
@@ -23,16 +24,27 @@ public class MusicChange : MonoBehaviour
         {
             audioSource.Stop();
             dialogueBox.SetActive(true);
-            Time.timeScale = 0;
+            IsPaused = true;
         } 
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void Update()
     {
-        if(collision.CompareTag("Player"))
+        if(IsPaused)
         {
+            Time.timeScale = 0;
+            TakeAction();
+        }
+    }
+
+    private void TakeAction()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            IsPaused = false;
+            Time.timeScale = 1;
             dialogueBox.SetActive(false);
             Destroy(bc);
-        } 
+        }
     }
 }
