@@ -10,6 +10,7 @@ public class MusicChange : MonoBehaviour
 
     [Header ("Audio")]
     public AudioSource audioSource;
+    [SerializeField] private AudioClip battle;
 
 
     void Start()
@@ -44,6 +45,7 @@ public class MusicChange : MonoBehaviour
             IsPaused = false;
             Time.timeScale = 1;
             dialogueBox.SetActive(false);
+            audioSource.PlayOneShot(battle);
             Destroy(bc);
         }
     }
