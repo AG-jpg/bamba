@@ -852,7 +852,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100637645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.83, y: -2.67, z: 0}
+  m_LocalPosition: {x: 31.92, y: -1.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -953,6 +953,8 @@ GameObject:
   m_Component:
   - component: {fileID: 110209815}
   - component: {fileID: 110209816}
+  - component: {fileID: 110209818}
+  - component: {fileID: 110209817}
   m_Layer: 0
   m_Name: SceneDirector
   m_TagString: Untagged
@@ -992,6 +994,121 @@ MonoBehaviour:
   player: {fileID: 0}
   controller: {fileID: 0}
   gameManager: {fileID: 0}
+--- !u!82 &110209817
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110209813}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 00f3dac0617a24076acda9cfbcdd241c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &110209818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110209813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aef6043128764bd59bd32c53782bf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yeti: {fileID: 1636462497}
+  dialogueBox: {fileID: 1663118955}
+  steps: {fileID: 1795701563}
+  IsDead: 0
+  IsPaused: 0
+  audioSource: {fileID: 535122728}
+  victory: {fileID: 8300000, guid: 00f3dac0617a24076acda9cfbcdd241c, type: 3}
 --- !u!1 &126909006
 GameObject:
   m_ObjectHideFlags: 0
@@ -10938,6 +11055,7 @@ MonoBehaviour:
   speedMovement: 2
   isAttacking: 0
   isKO: 0
+  IsPaused: 0
   actualPhase: 1
   vidas: 15
   bossName: Boss
@@ -10948,6 +11066,9 @@ MonoBehaviour:
   snowman: {fileID: 458515838856208517, guid: 0ffa51c3e99c940a4aa3805fa39bc779, type: 3}
   spawner: {fileID: 620543533}
   snow: {fileID: 3020058892947257623, guid: d0659a0bb43154296b4d7e8293ab333d, type: 3}
+  dialogueBox: {fileID: 1663118955}
+  audioSource: {fileID: 535122728}
+  victory: {fileID: 8300000, guid: 00f3dac0617a24076acda9cfbcdd241c, type: 3}
 --- !u!50 &1636462505
 Rigidbody2D:
   serializedVersion: 4
