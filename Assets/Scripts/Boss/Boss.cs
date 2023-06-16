@@ -35,6 +35,7 @@ public class Boss : MonoBehaviour
     private bool spawnActive;
     private int attackCount = 0;
     public bool isKO = false;
+    public bool IsPaused;
     public int actualPhase = 1;
     public int vidas;
     public string bossName;
@@ -43,11 +44,15 @@ public class Boss : MonoBehaviour
     public GameObject bullet;
     public GameObject platform;
     public Transform attackPoint;
-
     public GameObject attackTrigger;
     public GameObject snowman;
     public GameObject spawner;
     public GameObject snow;
+    public GameObject dialogueBox;
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    [SerializeField] private AudioClip victory;
 
     private void Awake()
     {
@@ -59,6 +64,7 @@ public class Boss : MonoBehaviour
         impact = transform.GetChild(0).GetComponent<ImpactArea>();
         MaxLife = vidas;
         gameObject.name = bossName;
+        IsPaused = false;
     }
 
     public void ActivateState(MonoBehaviour newState)
@@ -167,13 +173,18 @@ public class Boss : MonoBehaviour
 
         ManagePhase(actualPhase);
         Die();
+
+        if (IsPaused)
+        {
+            TakeAction();
+        }
     }
 
-        public void RecibirDano()
+    public void RecibirDano()
     {
-        if(vidas > 0)
+        if (vidas > 0)
         {
-            StartCoroutine(DamageImpact());   
+            StartCoroutine(DamageImpact());
         }
 
     }
@@ -182,14 +193,29 @@ public class Boss : MonoBehaviour
     {
         if (vidas <= 0)
         {
-            rb.velocity = Vector2.zero;
-            Instantiate(snow, transform.position, transform.rotation);
-            Destroy(gameObject, 0.5f);
-            platform.SetActive(true);
+            IsPaused = true;
+            Destroy(spawner);
+            rb.bodyType = RigidbodyType2D.Static;
+            anim.SetBool("Stunt", true);
+            dialogueBox.SetActive(true);
+            Destroy(attackTrigger);
         }
     }
 
-           private IEnumerator DamageImpact()
+    private void TakeAction()
+    {
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Instantiate(snow, transform.position, transform.rotation);
+            Destroy(gameObject, 0.5f);
+            Destroy(dialogueBox);
+            platform.SetActive(true);
+            IsPaused = false;
+        }
+    }
+
+    private IEnumerator DamageImpact()
     {
         yield return new WaitForSeconds(0.5f);
     }
