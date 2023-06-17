@@ -40,17 +40,20 @@ public class SceneDirector : MonoBehaviour
         if(scene.name == "Level1")
         {
             StartGame();
-        }else if(scene.name == "Menu")
+        }
+        else if(scene.name == "Menu")
         {
             vidasUI.SetActive(false);
             coinsUI.SetActive(false);
             player.SetActive(false);
-        }else if(scene.name == "Inter")
+        }
+        else if(scene.name == "Inter")
         {
             vidasUI.SetActive(false);
             coinsUI.SetActive(false);
             player.SetActive(false);
-        }else if(scene.name == "Game Over")
+        }
+        else if(scene.name == "Game Over")
         {
             vidasUI.SetActive(false);
             coinsUI.SetActive(false);
