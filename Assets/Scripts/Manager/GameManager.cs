@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [Header("Coins Panel")]
     public int coins;
     public Text textCoin;
+    public Scene scene;
 
      private void Awake() 
     {
@@ -45,6 +46,9 @@ public class GameManager : MonoBehaviour
     /// Update is called every frame, if the MonoBehaviour is enabled.
     private void Update()
     {
+        scene = SceneManager.GetActiveScene();
+
+        TextColor();
         CoinLife();
     }
 
@@ -72,6 +76,14 @@ public class GameManager : MonoBehaviour
     {
         coins = 0;
         textCoin.text = coins.ToString();
+    }
+
+    public void TextColor()
+    {
+        if (scene.name == "Level8")
+        {
+            textCoin.color = Color.white;
+        }
     }
 
     public void QuitGame()
