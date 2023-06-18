@@ -9,6 +9,7 @@ public class DialogueNPC : MonoBehaviour
     private PlayerController player;
     private BoxCollider2D bc;
     public bool IsPaused;
+    public bool chat;
 
     private void Awake()
     {
@@ -16,33 +17,45 @@ public class DialogueNPC : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
         ziman.SetActive(true);
         IsPaused = false;
+        chat = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-                dialogueBox.SetActive(true);
-                IsPaused = true;
+            chat = true;
         }
     }
 
     private void Update()
     {
-        if(IsPaused)
+        if (IsPaused)
         {
             Time.timeScale = 0;
             TakeAction();
         }
+
+        if(chat && Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Time.timeScale = 0;
+            Talk();
+        }
     }
 
+    public void Talk()
+    {
+        dialogueBox.SetActive(true);
+        IsPaused = true;
+    }
 
-       private void TakeAction()
+    private void TakeAction()
     {
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             Time.timeScale = 1;
             IsPaused = false;
+            chat = false;
             dialogueBox.SetActive(false);
             ziman.SetActive(false);
             player.AddLife();
