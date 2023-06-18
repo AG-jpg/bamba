@@ -5108,6 +5108,7 @@ MonoBehaviour:
   dialogueBox: {fileID: 620644294}
   ziman: {fileID: 1189096084}
   IsPaused: 0
+  chat: 0
 --- !u!4 &514623965 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1263724777599564720, guid: d141715a301d943bcbfe046c9e8e3f5e, type: 3}
@@ -6744,7 +6745,7 @@ MonoBehaviour:
     Space bar to jump.  Enter to pause
     the game.
 
-    Talk to the Snowy Lands inhabitants to get rewards'
+    Down arrow to talk to NPCs for rewards and hints.'
 --- !u!222 &691434321
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27224,7 +27225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1836292725
 RectTransform:
   m_ObjectHideFlags: 0
