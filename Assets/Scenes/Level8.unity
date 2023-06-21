@@ -3229,7 +3229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 146, y: -36}
+  m_AnchoredPosition: {x: -135, y: -77}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &534439980
@@ -9704,8 +9704,10 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.2
-  m_Text: OK.... you won.
+    m_LineSpacing: 1.1
+  m_Text: I concede defeat. But now that you have discover this land's treasures, 
+    you also have learned about the harmful impact of greed and ambition. Now You
+    have to to protect it.
 --- !u!222 &1387213189
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11338,7 +11340,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a4fc2eedfb8274e07ae9f7ffb69611cd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ff1838162fcd3459880a921bdb115cfd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
