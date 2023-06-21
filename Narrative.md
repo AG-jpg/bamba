@@ -31,3 +31,6 @@ Commercial fishing forces many penguin species to compete for the fish. The prac
 
 ## Level 7 NPC:
 Rapid ice loss in the Arctic causes seal pups to be prematurely separated from their mothers. This and the inability to build dens for protection leads to high pup mortality.
+
+## Level 8 Boss:
+You think you are making great discoveries... Reality is you are leading the path to land devastation and depredation. I will not let you, your journey ends here!
