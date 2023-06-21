@@ -49,6 +49,7 @@ public class Boss : MonoBehaviour
     public GameObject spawner;
     public GameObject snow;
     public GameObject dialogueBox;
+    public GameObject balloon;
 
     [Header("Audio")]
     public AudioSource audioSource;
@@ -199,6 +200,7 @@ public class Boss : MonoBehaviour
             anim.SetBool("Stunt", true);
             dialogueBox.SetActive(true);
             Destroy(attackTrigger);
+            Destroy(balloon);
         }
     }
 
