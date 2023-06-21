@@ -34,3 +34,5 @@ Rapid ice loss in the Arctic causes seal pups to be prematurely separated from t
 
 ## Level 8 Boss:
 You think you are making great discoveries... Reality is you are leading the path to land devastation and depredation. I will not let you, your journey ends here!
+
+I concede defeat. But now that you have discover this land's treasures,  you also have learned about the harmful impact of greed and ambition. Now You have to to protect it.
