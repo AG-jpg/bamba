@@ -10984,6 +10984,7 @@ MonoBehaviour:
   spawner: {fileID: 620543533}
   snow: {fileID: 3020058892947257623, guid: d0659a0bb43154296b4d7e8293ab333d, type: 3}
   dialogueBox: {fileID: 1663118955}
+  balloon: {fileID: 590087339}
   audioSource: {fileID: 535122728}
   victory: {fileID: 8300000, guid: 00f3dac0617a24076acda9cfbcdd241c, type: 3}
 --- !u!50 &1636462505
