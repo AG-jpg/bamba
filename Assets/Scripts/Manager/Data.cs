@@ -10,5 +10,7 @@ public static class Data
     // Stats Data
     public static int level;
     public static int vida;
+    public static int velocidad;
+    public static int salto;
 
 }
