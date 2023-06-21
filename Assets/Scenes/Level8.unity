@@ -1696,7 +1696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 146, y: -36}
+  m_AnchoredPosition: {x: -82, y: -83}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &319708444
@@ -2590,8 +2590,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -93, y: -3}
-  m_SizeDelta: {x: 1020, y: 240}
+  m_AnchoredPosition: {x: -93.001, y: 2}
+  m_SizeDelta: {x: 1003.422, y: 223.843}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &455844782
 MonoBehaviour:
@@ -2626,8 +2626,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: This is it, your journey through the snowy lands has ended, you'll never
-    scape!
+  m_Text: You think you are making great discoveries... Reality is you are leading
+    the path to land devastation and depredation. I will not let you, your journey
+    ends here!
 --- !u!222 &455844783
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4510,7 +4511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &656940557
 RectTransform:
   m_ObjectHideFlags: 0
