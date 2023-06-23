@@ -60,7 +60,7 @@ public class SaveControl : MonoBehaviour
             Data.velocidad = info.velocidad;
             Data.salto = info.salto;
 
-            Application.OpenURL(Application.persistentDataPath);
+            //Application.OpenURL(Application.persistentDataPath);
         }
         else
         {
