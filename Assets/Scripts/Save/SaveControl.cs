@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 
 public class SaveControl : MonoBehaviour
 {
@@ -33,11 +36,26 @@ public class SaveControl : MonoBehaviour
 
     public void SaveGame()
     {
+        Save info = CreateSavedGameObject();
 
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/gamesave.save");
+        bf.Serialize(file, info);
+        file.Close();
     }
 
     public void LoadGame()
     {
-        
+        if(File.Exists(Application.persistentDataPath + "/gamesave.save"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/gamesave.save", FileMode.Open);
+            Save info = (Save).bf.Deserialize(file);
+            file.Close();
+        }
+        else
+        {
+            SaveGame();
+        }
     }
 }
