@@ -9,10 +9,10 @@ using System.Runtime.Serialization;
 
 public class SaveControl : MonoBehaviour
 {
-    
+
     private void Start()
     {
-        if(SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByBuildIndex(0)))
+        if (SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByBuildIndex(0)))
         {
             LoadGame();
         }
@@ -24,7 +24,6 @@ public class SaveControl : MonoBehaviour
 
         //Inventario Data
         info.notes = Data.notes;
-
         // Stats Data
         info.level = Data.level;
         info.vida = Data.vida;
@@ -46,12 +45,20 @@ public class SaveControl : MonoBehaviour
 
     public void LoadGame()
     {
-        if(File.Exists(Application.persistentDataPath + "/gamesave.save"))
+        if (File.Exists(Application.persistentDataPath + "/gamesave.save"))
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/gamesave.save", FileMode.Open);
             Save info = (Save).bf.Deserialize(file);
             file.Close();
+
+            //Inventario Data
+            Data.notes = info.notes;
+            // Stats Data
+            Data.level = info.level;
+            Data.vida = info.vida;
+            Data.velocidad = info.velocidad;
+            Data.salto = info.salto;
         }
         else
         {
