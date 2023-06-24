@@ -16,8 +16,29 @@ body {
     background-size: cover;
 }
 
+h1{
+    color: #3639a4;
+}
+
 nav {
-    height: 80px;
+    max-height: 80px;
     width: 100%;
-    border-color: red;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-end;
+    padding: 24px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    margin-right: 32px;
+}
+
+.item {
+    display: block;
+    color: #3639a4;
+    font-weight: 500;
+    padding-right: 24px;
 }
