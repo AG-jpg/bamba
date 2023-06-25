@@ -16,13 +16,10 @@ body {
     background-size: cover;
 }
 
-h1{
-    color: #3639a4;
-}
-
 nav {
     max-height: 80px;
     width: 100%;
+    /*display: none;*/
     display: flex;
     flex-wrap: nowrap;
     align-content: center;
@@ -33,12 +30,33 @@ nav {
 nav ul {
     display: flex;
     flex-direction: row;
-    margin-right: 32px;
 }
 
 .item {
     display: block;
     color: #3639a4;
-    font-weight: 500;
+    font-weight: 600;
     padding-right: 24px;
+}
+
+a:visited{
+    color: #3639a4;
+}
+
+a:hover{
+    color: #4d51c5;
+}
+
+section{
+    width: 100%;
+    height: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+}
+
+h1{
+    color: #3639a4;
 }
