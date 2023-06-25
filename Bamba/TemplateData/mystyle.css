@@ -48,15 +48,16 @@ a:hover{
 }
 
 section{
-    width: 100%;
+    width: 1024px;
     height: auto;
     padding: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: red;
 }
 
-h1{
+h1, h2{
     color: #3639a4;
+    margin-bottom: 24px;
+    text-align: center;
 }
