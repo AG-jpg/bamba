@@ -2728,7 +2728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &295114421
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25814,8 +25814,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -105, y: 0}
-  m_SizeDelta: {x: 911.453, y: 215.07}
+  m_AnchoredPosition: {x: -75, y: -2}
+  m_SizeDelta: {x: 1000, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1840645830
 MonoBehaviour:
@@ -25839,7 +25839,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 37268a78ecdb4401b9c5ecac869771fd, type: 3}
-    m_FontSize: 40
+    m_FontSize: 38
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -25850,8 +25850,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: 65 species of fungi are listed as endangered. Fungi are crucial for the
-    carbon cycle by decomposing organic matter.
+  m_Text: "65 species of fungi are listed as endangered. \nFungi are crucial for
+    the carbon cycle by decomposing organic matter."
 --- !u!222 &1840645831
 CanvasRenderer:
   m_ObjectHideFlags: 0
