@@ -2334,7 +2334,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -93.001, y: 2}
-  m_SizeDelta: {x: 1003.422, y: 223.843}
+  m_SizeDelta: {x: 1000, y: 223.843}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &455844782
 MonoBehaviour:
@@ -2358,7 +2358,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 37268a78ecdb4401b9c5ecac869771fd, type: 3}
-    m_FontSize: 40
+    m_FontSize: 34
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2369,9 +2369,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: You think you are making great discoveries... Reality is you are leading
+  m_Text: "You think you are making great discoveries... \nReality is you are leading
     the path to land devastation and depredation. I will not let you, your journey
-    ends here!
+    ends here!"
 --- !u!222 &455844783
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9367,7 +9367,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -93, y: -3}
-  m_SizeDelta: {x: 1020, y: 240}
+  m_SizeDelta: {x: 1020, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1387213188
 MonoBehaviour:
@@ -9391,7 +9391,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 37268a78ecdb4401b9c5ecac869771fd, type: 3}
-    m_FontSize: 40
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -9401,7 +9401,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.1
+    m_LineSpacing: 1.2
   m_Text: I concede defeat. But now that you have discover this land's treasures, 
     you also have learned about the harmful impact of greed and ambition. Now You
     have to to protect it.
