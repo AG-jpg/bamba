@@ -7,62 +7,65 @@
 }
 
 body {
-    padding: 0;
-    margin: 0;
+    width: 100%;
     background-color: #d2d2e6;
-    background-image: url(TemplateData/img/splash-clouds.jpg);
+    background-image: url(../TemplateData/img/splash-clouds.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-nav {
-    max-height: 80px;
+#container{
     width: 100%;
-    /*display: none;*/
     display: flex;
-    flex-wrap: nowrap;
+    align-items: center;
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+    display: flex;
     align-content: center;
     justify-content: flex-end;
-    padding: 24px;
+    border: 1px solid red;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
+    width: 30%;
+    border: 1px solid red;
 }
 
 .item {
     display: block;
     color: #3639a4;
     font-weight: 600;
-    padding-right: 24px;
 }
 
-a:visited{
+a:visited {
     color: #3639a4;
 }
 
-a:hover{
+a:hover {
     color: #4d51c5;
 }
 
-section{
-    width: 1024px;
+section {
+    width: 1200px;
     height: auto;
-    padding: 24px;
+    margin-top: 24px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-h1, h2{
+h1, h2 {
     color: #3639a4;
     margin-bottom: 24px;
     text-align: center;
 }
 
-.columns{
+.columns {
     width: 1024px;
     height: auto;
     padding: 24px;
@@ -70,12 +73,12 @@ h1, h2{
     flex-direction: row;
 }
 
-.side{
+.side {
     width: 50%;
     height: auto;
 }
 
-.side img{
+.side img {
     width: 80%;
     height: auto;
 }
