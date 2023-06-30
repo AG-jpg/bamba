@@ -13,35 +13,55 @@ body {
 }
 
 nav {
-    max-height: 80px;
+    /*position: fixed;*/
+    top: 0;
+    overflow: hidden;
+    height: 64px;
     width: 100%;
-    /*display: none;*/
     display: flex;
-    flex-wrap: nowrap;
     align-content: center;
-    justify-content: flex-end;
-    padding: 24px;
+    -webkit-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.2);
+    background-color: rgba(36, 38, 130, 0.2);
+}
+
+#logo{
+    width: 50%;
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+}
+
+#logo img{
+    height: 48px;
+    width: auto;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    margin-right: 96px;
 }
 
 .item {
     display: block;
+    width: 120px;
+    text-align: center;
     color: #3639a4;
     font-weight: 600;
-    padding-right: 24px;
 }
 
-a:visited{
+a:visited {
     color: #3639a4;
 }
 
-a:hover{
+a:hover {
     color: #4d51c5;
 }
+
 
 section{
     width: 1024px;
