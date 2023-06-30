@@ -55,3 +55,27 @@ section{
     flex-direction: column;
     justify-content: center;
 }
+
+h1, h2{
+    color: #3639a4;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.columns{
+    width: 1024px;
+    height: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+}
+
+.side{
+    width: 50%;
+    height: auto;
+}
+
+.side img{
+    width: 80%;
+    height: auto;
+}
