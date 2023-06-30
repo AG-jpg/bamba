@@ -22,26 +22,42 @@ body {
 }
 
 nav {
+    /*position: fixed;*/
+    top: 0;
+    overflow: hidden;
     height: 64px;
     width: 100%;
     display: flex;
     align-content: center;
-    justify-content: flex-end;
+    -webkit-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.2);
+    background-color: rgba(36, 38, 130, 0.2);
+}
 
+#logo{
+    width: 50%;
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+}
+
+#logo img{
+    height: 48px;
+    width: auto;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    width: 30%;
+    justify-content: flex-end;
+    width: 50%;
+    margin-right: 96px;
 }
 
 .item {
     display: block;
-    width: 160px;
+    width: 120px;
     text-align: center;
     color: #3639a4;
     font-weight: 600;
