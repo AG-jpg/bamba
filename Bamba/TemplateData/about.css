@@ -11,8 +11,8 @@ body {
     background-color: #d2d2e6;
     background-image: url(../TemplateData/img/splash-clouds.jpg);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: top;
+    background-size: contain;
 }
 
 #container {
@@ -101,9 +101,35 @@ h2 {
     height: auto;
 }
 
-.side img {
+.side img{
     width: 80%;
     height: auto;
+    border-radius: 8px;
+}
+
+#pic-left{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#pic-right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#icons{
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.material-icons{
+    margin-right: 16px;
+    color: #3639a4;
 }
 
 #footer {
