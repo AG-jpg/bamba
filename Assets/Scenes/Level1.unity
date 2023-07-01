@@ -14801,7 +14801,6 @@ GameObject:
   - component: {fileID: 1067618030}
   - component: {fileID: 1067618029}
   - component: {fileID: 1067618028}
-  - component: {fileID: 1067618027}
   m_Layer: 5
   m_Name: Level 1
   m_TagString: Untagged
@@ -14830,18 +14829,6 @@ RectTransform:
   m_AnchoredPosition: {x: -600, y: 100}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1067618027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067618025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73191ad9c406e4855a889921d8d959fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1067618028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14886,7 +14873,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1067618027}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: PressButton
         m_Mode: 3
@@ -14918,7 +14905,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5f071997df53142f3bd937f2857ce786, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 44f6b6ffc4f9341f4b85945f93820ef8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
